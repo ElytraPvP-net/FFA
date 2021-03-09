@@ -1,0 +1,40 @@
+main: net.elytrapvp.ffa.FFA
+
+name: FFA
+version: 1.0
+api-version: 1.16
+author: ElytraPvP
+
+depend:
+  - ElytraPvP
+  - Levels
+  - PlaceholderAPI
+  - floodgate-bukkit
+
+commands:
+  admin:
+    usage: /<command>
+    description: Admin command
+    permission: ep.admin
+  cosmetics:
+    usage: /<command>
+    description: View the cosmetics.
+  kits:
+    usage: /<command>
+    description: View all available kits.
+  leaderboards:
+    usage: /<command>
+    description: View the server leaderboards
+    aliases: [top]
+  spawn:
+    usage: /<command>
+    description: Teleport to spawn
+  stats:
+    usage: /<command>
+    description: View a player's stats
+  bounty:
+    usage: /<command>
+    description: Plave a bounty on a player
+  eventshop:
+    usage: /<command>
+    description: Open the event shop

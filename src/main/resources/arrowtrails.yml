@@ -1,0 +1,301 @@
+ArrowTrails:
+  1:
+    Name: "Red Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 255
+      G: 0
+      B: 0
+    Price: 300
+    Icon:
+      DisplayName: '&aRed Arrow Trail'
+      Material: RED_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  2:
+    Name: "Orange Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 255
+      G: 165
+      B: 0
+    Price: 300
+    Icon:
+      DisplayName: '&aOrange Arrow Trail'
+      Material: ORANGE_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  3:
+    Name: "Yellow Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 255
+      G: 255
+      B: 0
+    Price: 300
+    Icon:
+      DisplayName: '&aYellow Arrow Trail'
+      Material: YELLOW_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  4:
+    Name: "Lime Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 0
+      G: 255
+      B: 0
+    Price: 300
+    Icon:
+      DisplayName: '&aLime Arrow Trail'
+      Material: LIME_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  5:
+    Name: "Green Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 0
+      G: 134
+      B: 0
+    Price: 300
+    Icon:
+      DisplayName: '&aGreen Arrow Trail'
+      Material: GREEN_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  6:
+    Name: "Cyan Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 0
+      G: 172
+      B: 172
+    Price: 300
+    Icon:
+      DisplayName: '&aCyan Arrow Trail'
+      Material: CYAN_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  7:
+    Name: "Light Blue Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 108
+      G: 181
+      B: 255
+    Price: 300
+    Icon:
+      DisplayName: '&aLight Blue Arrow Trail'
+      Material: LIGHT_BLUE_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  8:
+    Name: "Blue Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 0
+      G: 0
+      B: 255
+    Price: 300
+    Icon:
+      DisplayName: '&aBlue Arrow Trail'
+      Material: BLUE_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  9:
+    Name: "Purple Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 255
+      G: 0
+      B: 255
+    Price: 300
+    Icon:
+      DisplayName: '&aPurple Arrow Trail'
+      Material: PURPLE_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  10:
+    Name: "Pink Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 255
+      G: 195
+      B: 209
+    Price: 300
+    Icon:
+      DisplayName: '&aPink Arrow Trail'
+      Material: PINK_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  11:
+    Name: "Black Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 0
+      G: 0
+      B: 0
+    Price: 300
+    Icon:
+      DisplayName: '&aBlack Arrow Trail'
+      Material: BLACK_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  12:
+    Name: "White Arrow Trail"
+    Particle: REDSTONE
+    Color:
+      R: 255
+      G: 255
+      B: 255
+    Price: 300
+    Icon:
+      DisplayName: '&aWhite Arrow Trail'
+      Material: WHITE_DYE
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  13:
+    Name: "Flame Arrow Trail"
+    Particle: FLAME
+    Price: 300
+    Icon:
+      DisplayName: '&aFlame Arrow Trail'
+      Material: FLINT_AND_STEEL
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  14:
+    Name: "Heart Arrow Trail"
+    Particle: HEART
+    Price: 300
+    Icon:
+      DisplayName: '&aHeart Arrow Trail'
+      Material: POPPY
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  15:
+    Name: "Note Arrow Trail"
+    Particle: NOTE
+    Price: 300
+    Icon:
+      DisplayName: '&aNote Arrow Trail'
+      Material: NOTE_BLOCK
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  16:
+    Name: "Slime Arrow Trail"
+    Particle: SLIME
+    Price: 300
+    Icon:
+      DisplayName: '&aSlime Arrow Trail'
+      Material: SLIME_BALL
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  17:
+    Name: "Totem Arrow Trail"
+    Particle: TOTEM
+    Price: 300
+    Icon:
+      DisplayName: '&aTotem Arrow Trail'
+      Material: TOTEM_OF_UNDYING
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  18:
+    Name: "Squid Ink Arrow Trail"
+    Particle: SQUID_INK
+    Price: 300
+    Icon:
+      DisplayName: '&aSquid Ink Arrow Trail'
+      Material: INK_SAC
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  19:
+    Name: "Water Arrow Trail"
+    Particle: WATER_DROP
+    Price: 300
+    Icon:
+      DisplayName: '&aWater Arrow Trail'
+      Material: WATER_BUCKET
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  20:
+    Name: "Snow Arrow Trail"
+    Particle: SNOWBALL
+    Price: 300
+    Icon:
+      DisplayName: '&aSnow Arrow Trail'
+      Material: SNOWBALL
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []
+  21:
+    Name: "Dragon Breath Arrow Trail"
+    Particle: DRAGON_BREATH
+    Price: 300
+    Icon:
+      DisplayName: '&aDragon Breath Arrow Trail'
+      Material: DRAGON_BREATH
+      Number: 1
+      Unbreakable: false
+      Lore:
+        - "&7Click to select."
+      Enchantments: []

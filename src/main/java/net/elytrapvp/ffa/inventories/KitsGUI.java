@@ -1,0 +1,69 @@
+package net.elytrapvp.ffa.inventories;
+
+import net.elytrapvp.elytrapvp.chat.ChatUtils;
+import net.elytrapvp.elytrapvp.gui.CustomGUI;
+import net.elytrapvp.elytrapvp.items.ItemBuilder;
+import net.elytrapvp.ffa.events.KitUnlockEvent;
+import net.elytrapvp.ffa.objects.CustomPlayer;
+import net.elytrapvp.ffa.objects.Kit;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.ClickType;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class KitsGUI extends CustomGUI {
+    private static final int[] slots = new int[]{11,12,13,14,15,20,21,22,23,24,29,30,31,32,33};
+
+    public KitsGUI(Player p) {
+        super(54, "Kits");
+        fillers();
+
+        CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
+
+        for(int i = 0; i < Kit.getKits().size(); i++) {
+            Kit kit = Kit.getKits().get(i);
+
+            setItem(slots[i], kit.getIcon(p), (player, action) -> {
+                if(action == ClickType.RIGHT) {
+                    new PreviewKitGUI(kit).open(player);
+                }
+                else {
+                    if(cp.getUnlockedKits().contains(kit.getId())) {
+                        player.closeInventory();
+                        cp.setKit(kit.getId());
+                        ChatUtils.chat(player, "&2&lKit &8- &aYou have selected Kit &f" + kit.getName() + "&a.");
+                    }
+                    else {
+                        if(cp.getCoins() >= kit.getPrice()) {
+                            cp.removeCoins(kit.getPrice());
+                            ChatUtils.chat(player, "&2&lKit &8- &aYou have purchased and equipped Kit &f" + kit.getName() + "&a.");
+                            cp.setKit(kit.getId());
+                            cp.unlockKit(kit.getId());
+                            p.closeInventory();
+                            Bukkit.getPluginManager().callEvent(new KitUnlockEvent(cp, kit));
+                        }
+                        else {
+                            ChatUtils.chat(player, "&c&l(&7!&c&l) &cYou do not have enough coins.");
+                            player.closeInventory();
+                        }
+                    }
+                }
+            });
+        }
+
+        setItem(40, new ItemBuilder(Material.COMPASS).setDisplayName("&aSpectator Mode").build(), (player, action) -> {
+            cp.setKit(-1);
+            ChatUtils.chat(p, "&2&lSpectator &8- &aEntered Spectator Mode");
+        });
+    }
+
+    private void fillers() {
+        List<Integer> slots = Arrays.asList(0,1,2,3,4,5,6,7,8,9,10,16,17,18,19,25,26,27,28,34,35,36,37,43,44,45,46,47,48,49,50,51,52,53);
+        ItemStack filler = new ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setDisplayName(" ").build();
+        slots.forEach(i -> setItem(i, filler));
+    }
+}

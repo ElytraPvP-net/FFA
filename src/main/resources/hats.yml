@@ -1,0 +1,245 @@
+Hats:
+  1:
+    Name: "Cow"
+    Price: 50
+    Skin: "5d6c6eda942f7f5f71c3161c7306f4aed307d82895f9d2b07ab4525718edc5"
+  2:
+    Name: "Chicken"
+    Price: 50
+    Skin: "1638469a599ceef7207537603248a9ab11ff591fd378bea4735b346a7fae893"
+  3:
+    Name: "Pig"
+    Price: 50
+    Skin: "621668ef7cb79dd9c22ce3d1f3f4cb6e2559893b6df4a469514e667c16aa4"
+  4:
+    Name: "Squid"
+    Price: 50
+    Skin: "01433be242366af126da434b8735df1eb5b3cb2cede39145974e9c483607bac"
+  5:
+    Name: "Mooshroom"
+    Price: 50
+    Skin: "d0bc61b9757a7b83e03cd2507a2157913c2cf016e7c096a4d6cf1fe1b8db"
+  6:
+    Name: "Ocelot"
+    Price: 50
+    Skin: "5657cd5c2989ff97570fec4ddcdc6926a68a3393250c1be1f0b114a1db1"
+  7:
+    Name: "Owl"
+    Price: 50
+    Skin: "664694b68165bb9aabe79e13bc887e88ff3b0dfbf34ccaacc2a3ad4a9ddf9e2"
+  8:
+    Name: "Penguin"
+    Price: 50
+    Skin: "d3c57facbb3a4db7fd55b5c0dc7d19c19cb0813c748ccc9710c714727551f5b9"
+  9:
+    Name: "Turtle"
+    Price: 50
+    Skin: "212b58c841b394863dbcc54de1c2ad2648af8f03e648988c1f9cef0bc20ee23c"
+  10:
+    Name: "Panda"
+    Price: 50
+    Skin: "d8cdd4f285632c25d762ece25f4193b966c2641b15d9bdbc0a113023de76ab"
+  11:
+    Name: "Fish"
+    Price: 50
+    Skin: "6f99b580d45a784e7a964e7d3b1f97cece74911173bd21c1d7c56acdc385ed5"
+  12:
+    Name: "Fox"
+    Price: 50
+    Skin: "24a0347436434eb13d537b9eb6b45b6ef4c5a78f86e91863ef61d2b8a53b82"
+  13:
+    Name: "Tiger"
+    Price: 50
+    Skin: "b6b96bbc8ad9bae0e254d35fdfb1db48e822ed97cf5f739d3e9545dd6ce"
+  14:
+    Name: "Walrus"
+    Price: 50
+    Skin: "d7baedaf9ad95474eb1be58924445dfc77bbdc252cc1c81644cf7154c441"
+  15:
+    Name: "Elephant"
+    Price: 50
+    Skin: "7071a76f669db5ed6d32b48bb2dba55d5317d7f45225cb3267ec435cfa514"
+  16:
+    Name: "Frog"
+    Price: 50
+    Skin: "b554e67fd2f39232f097d0f2ada71be7db8d6080ea7fda63506ab81d472c5eb"
+  17:
+    Name: "Dog"
+    Price: 50
+    Skin: "4dfc332ae3907c3cea595d6521a549a6f754dba5c57d338a36257e2810e08bef"
+  18:
+    Name: "Clownfish"
+    Price: 50
+    Skin: "36d149e4d499929672e2768949e6477959c21e65254613b327b538df1e4df"
+  19:
+    Name: "Salmon"
+    Price: 50
+    Skin: "adfc57d09059e4799fa92c15e28512bcfaa1315577fe3a27aed389e4f752289a"
+  20:
+    Name: "Pufferfish"
+    Price: 50
+    Skin: "a9559388993fe782f67bd58d98c4df56bcd430edcb2f66ef5777a73c27de3"
+  21:
+    Name: "Bee"
+    Price: 50
+    Skin: "947322f831e3c168cfbd3e28fe925144b261e79eb39c771349fac55a8126473"
+  22:
+    Name: "Grass"
+    Price: 50
+    Skin: "219e36a87baf0ac76314352f59a7f63bdb3f4c86bd9bba6927772c01d4d1"
+  23:
+    Name: "Stone"
+    Price: 50
+    Skin: "9af8313a2886ed990a3d38171634cc7ba9528bb00d4b53cb0d712b1cb206bd4f"
+  24:
+    Name: "Cobblestone"
+    Price: 50
+    Skin: "e742885db6803ab3680ca50ac2b97b08bddc24e1ad3095da914677f524a6b1a6"
+  25:
+    Name: "Granite"
+    Price: 50
+    Skin: "63b88c789ab0bc3901f4de38dd72d32553bb08828b73b84fa8d73146e0e58b0c"
+  26:
+    Name: "Diorite"
+    Price: 50
+    Skin: "a14c6e41a762d37863a9fff6888c738905b92cc6c3898892a38dfdfe2ac4bf"
+  27:
+    Name: "Andesite"
+    Price: 50
+    Skin: "adb7bf059a62d27b1e1e2f34394f3f38ed8cda45471f6f4d5b47c3912d181135"
+  28:
+    Name: "Basalt"
+    Price: 50
+    Skin: "377d65fcd6ced8065c6c1293da4a50425026f0a77a7f2a66c958d5aef1bb0979"
+  29:
+    Name: "Prismarine"
+    Price: 50
+    Skin: "b7bf111d671b52770d6a24fd78c8f0e107d3f7cfdf671d72b532103fd9ee9b89"
+  30:
+    Name: "Prismarine Brick"
+    Price: 50
+    Skin: "9dfef03a9d9fa7aa9c13867ae7f88a00a708a06df24ec1d5b696d0f77a1b96b1"
+  31:
+    Name: "Dark Prismarine"
+    Price: 50
+    Skin: "bf503bdd15ec4bead35f9e9108a2cb8d0dc381dc512794ced6bb4f21dc9d8a8a"
+  32:
+    Name: "Bedrock"
+    Price: 50
+    Skin: "bf7a422db35d28cfb67e6c1615cdac4d73007247187740ba8653899a44b7b520"
+  33:
+    Name: "Bricks"
+    Price: 50
+    Skin: "de6440a8d5992c267d2a3363882964ac2ba522f2f9114a6f7d17b35722d2f5f8"
+  34:
+    Name: "Obsidian"
+    Price: 50
+    Skin: "4de719b72909efa097815a63380f4456af9e4afebdd894e5b58b7c9e05675577"
+  35:
+    Name: "Crying Obsidian"
+    Price: 50
+    Skin: "da5c8686411d446c90c191c93f80b9ffb1cd247aa12a226f8979981ad4388bee"
+  36:
+    Name: "Purpur Block"
+    Price: 50
+    Skin: "9dbf73457b539dc81c30394b6f72f57a113b40b9cbe9b0aa042e48f1c9155bc6"
+  37:
+    Name: "Shroomlight"
+    Price: 50
+    Skin: "b13192955ae419e2c84321d2803269f53384cb0228c79165cd940a4cacea4b0d"
+  38:
+    Name: "Oak Log"
+    Price: 50
+    Skin: "3b651d35d19a70f3772ea55956f22264a1fb2aeff6959b4e14065a956962971c"
+  39:
+    Name: "Birch Log"
+    Price: 50
+    Skin: "8a0257f9e7f3a3c14c44f270cb61dc138b60c0c20e39c44e01763fd559821222"
+  40:
+    Name: "Jungle Log"
+    Price: 50
+    Skin: "e6626c43eb167dffd476228b7c89b76f28c6f284c4b06a1951461fc4b20d4675"
+  41:
+    Name: "Spruce Log"
+    Price: 50
+    Skin: "56c821d7478e97dd77d06994d63268a87e9f88fa264b0301988caaa356edce7c"
+  42:
+    Name: "Acacia Log"
+    Price: 50
+    Skin: "28c4516ad8464c06d4817e26625dda562aa61b1c5d885f4df72151e5b909af3a"
+  43:
+    Name: "Dark Oak Log"
+    Price: 50
+    Skin: "db6afc504df12f6c8cea43bfae0ef185f8dad83a7d8a7c74a81cef207f7a2e0"
+  44:
+    Name: "Crimson Stem"
+    Price: 50
+    Skin: "843b4c87f97818d71f13afa6db946fb0a235cd771ae869924c98b3d17d76499b"
+  45:
+    Name: "Warped Stem"
+    Price: 50
+    Skin: "4aa4bb4a782a63672a339a74cd173119db09a0456850405a34c7c0f4bfdb9d15"
+  46:
+    Name: "Red Wool"
+    Price: 50
+    Skin: "6953b12a0946b629b4c0889d41fd26ed26fb729d4d514b59727124c37bb70d8d"
+  47:
+    Name: "Orange Wool"
+    Price: 50
+    Skin: "adf2eb205a23c1196b3ecf21e68c076b696e76163ac8fc4fb9f5318c2a5e5b1a"
+  48:
+    Name: "Yellow Wool"
+    Price: 50
+    Skin: "4d905269accab24b11924eba8bd92991b8d85ce4276027a1636c931b6d06c89e"
+  49:
+    Name: "Lime Wool"
+    Price: 50
+    Skin: "77472d608821f45a8805376ec0c6ffcb78117829ea5f960041c2a09d10e04cb4"
+  50:
+    Name: "Green Wool"
+    Price: 50
+    Skin: "53581c2f9cf358d7edc78dd6fd4b6257501bc4e6455e33fa0caae207cf0321a2"
+  51:
+    Name: "Cyan Wool"
+    Price: 50
+    Skin: "1fadf741ab76cd3620ad161300202d7b59a33051e5967e4b6194bac40bb280ff"
+  52:
+    Name: "Light Blue Wool"
+    Price: 50
+    Skin: "163e6646f1c0d41fd3bf5584a1ce044f5c46d598258db46216117859f57af197"
+  53:
+    Name: "Blue Wool"
+    Price: 50
+    Skin: "ea81fcb51be2a9f89b1adc9d87239ba429d635fbe01b37ec329164887bf665b"
+  54:
+    Name: "Purple Wool"
+    Price: 50
+    Skin: "89ec5a30222d0659b0dbee844b8f53eae62fe95b4a3448a9ef790a7aedb296d9"
+  55:
+    Name: "Magenta Wool"
+    Price: 50
+    Skin: "f97012ed6a92b05ea0f194950748544e075baa28781ca373d1b27e28c26953c"
+  56:
+    Name: "Pink Wool"
+    Price: 50
+    Skin: "d0883650ea929db0eabdf5bc75599d8ef00d70340cd1ce5e04ad95ef8ed83b73"
+  57:
+    Name: "White Wool"
+    Price: 50
+    Skin: "d08df60c51074eef2544ff38cead9e16675ae4251916105180e1f8ce197ab3bc"
+  58:
+    Name: "Light Gray Wool"
+    Price: 50
+    Skin: "55288ddc911a75f77c3a5d336365a8f8b139fa53930b4b6ee139875c80ce366c"
+  59:
+    Name: "Gray Wool"
+    Price: 50
+    Skin: "adf21f532122566af893da27880a1b6095c35712f29a378cfecc7fe2b1328ab4"
+  60:
+    Name: "Black Wool"
+    Price: 50
+    Skin: "cfa4dda6d19a1fe2d988d65dec53429505308166c9067b68a4770ca5c436cf94"
+  61:
+    Name: "Brown Wool"
+    Price: 50
+    Skin: "22cbd9f43619ab5cb1b11f91cb03e955c6fc6c458abf89ab61031346a090612e"

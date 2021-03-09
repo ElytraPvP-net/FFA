@@ -1,0 +1,90 @@
+# -----------------------------------------
+#               MySQL
+# -----------------------------------------
+MySQL:
+  host: "localhost"
+  port: 3306
+  database: "database"
+  username: "username"
+  password: "password"
+  useSSL: true
+
+
+# -----------------------------------------
+#               Spawn
+# -----------------------------------------
+
+# The location /ep spawn takes you to.
+Spawn:
+  X: 0.0
+  Y: 0.0
+  Z: 0.0
+  Yaw: 0.0
+  Pitch: 0.0
+  Set: false
+
+
+# -----------------------------------------
+#               Arena
+# -----------------------------------------
+Arena:
+  Name: ""
+  Pos1:
+    x: -1
+    y: -1
+    z: -1
+  Pos2:
+    x: -1
+    y: -1
+    z: -1
+
+# -----------------------------------------
+#               Parkour
+# -----------------------------------------
+Parkour:
+  Green:
+    From:
+      X: 311
+      Y: 114
+      Z: -406
+    To:
+      X: 414
+      Y: 115
+      Z: -875
+  Yellow:
+    From:
+      X: 419
+      Y: 126
+      Z: -866
+    To:
+      X: 414
+      Y: 115
+      Z: -916
+  Red:
+    From:
+      X: 413
+      Y: 127
+      Z: -928
+    To:
+      X: 322
+      Y: 106
+      Z: -387
+
+# -----------------------------------------
+#               Settings
+# -----------------------------------------
+
+# Set to false when building.
+Enabled: false
+Event: CHRISTMAS
+
+# These are the blocks that players die when they touch.
+# Uses spigot material ids: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+DeathBlocks:
+  - GRASS
+  - LEAVES
+  - LIME_TERRACOTTA
+  - GREEN_TERRACOTTA
+  - JUNGLE_LEAVES
+  - BlUE_TERRACOTTA
+  - SAND
