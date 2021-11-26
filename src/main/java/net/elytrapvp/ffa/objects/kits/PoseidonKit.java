@@ -9,6 +9,7 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.UUID;
@@ -57,6 +58,7 @@ public class PoseidonKit extends Kit {
                     .addLore("&7Right Click to Preview");
         }
 
+        builder.addFlag(ItemFlag.HIDE_ATTRIBUTES);
         return builder.build();
     }
 }

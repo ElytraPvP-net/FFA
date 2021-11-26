@@ -6,6 +6,7 @@ import net.elytrapvp.ffa.objects.Kit;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 
 public class KnightKit extends Kit {
@@ -47,6 +48,7 @@ public class KnightKit extends Kit {
                     .addLore("&7Right Click to Preview");
         }
 
+        builder.addFlag(ItemFlag.HIDE_ATTRIBUTES);
         return builder.build();
     }
 }
