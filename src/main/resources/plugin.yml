@@ -37,3 +37,4 @@ commands:
   eventshop:
     usage: /<command>
     description: Open the event shop
+    aliases: [shop]
