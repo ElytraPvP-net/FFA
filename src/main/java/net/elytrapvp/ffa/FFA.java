@@ -110,7 +110,6 @@ public class FFA extends JavaPlugin {
         getCommand("stats").setExecutor(new StatsCMD());
         getCommand("bounty").setExecutor(new BountyCMD());
         getCommand("eventshop").setExecutor(new EventShopCMD());
-        getCommand("maps").setExecutor(new MapsCMD(this));
     }
 
     /**

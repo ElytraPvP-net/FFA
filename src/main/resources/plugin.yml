@@ -37,6 +37,3 @@ commands:
   eventshop:
     usage: /<command>
     description: Open the event shop
-  maps:
-    usage: /<command>
-    description: View all available plugin maps.
