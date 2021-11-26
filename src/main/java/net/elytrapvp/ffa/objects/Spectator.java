@@ -55,7 +55,7 @@ public class Spectator {
         p.getInventory().clear();
         p.getInventory().setItem(1, new ItemBuilder(Material.EMERALD).setDisplayName("&aCosmetics").build());
         p.getInventory().setItem(4, new ItemBuilder(Material.NETHER_STAR).setDisplayName("&aKit Selector").build());
-        p.getInventory().setItem(7, new ItemBuilder(Material.BOOK).setDisplayName("&aAchievements").build());
+        p.getInventory().setItem(7, new ItemBuilder(Material.PAPER).setDisplayName("&aMaps").build());
         p.getInventory().setItem(8, new SkullBuilder(p).setDisplayName("&aStats").build());
 
         Bukkit.getOnlinePlayers().forEach(player -> player.showPlayer(FFA.getPlugin(), p));

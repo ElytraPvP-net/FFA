@@ -4,8 +4,6 @@ import net.elytrapvp.elytrapvp.gui.CustomGUI;
 import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.levels.api.LevelsAPI;
-import net.elytrapvp.levels.api.LevelsPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -25,8 +23,8 @@ public class StatsGUI extends CustomGUI {
         fillers();
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(player.getUniqueId());
-        LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(player.getUniqueId());
-        setItems(cp, lp);
+        //LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(player.getUniqueId());
+        setItems(cp);
     }
 
     public StatsGUI(OfflinePlayer player) {
@@ -34,11 +32,11 @@ public class StatsGUI extends CustomGUI {
         fillers();
 
         CustomPlayer cp = new CustomPlayer(player.getUniqueId());
-        LevelsPlayer lp = new LevelsPlayer(player.getUniqueId());
-        Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> setItems(cp, lp), 5);
+        //LevelsPlayer lp = new LevelsPlayer(player.getUniqueId());
+        Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> setItems(cp), 5);
     }
 
-    private void setItems(CustomPlayer cp, LevelsPlayer lp) {
+    private void setItems(CustomPlayer cp) {
         double kdr = ((double) cp.getKills()) / ((double) cp.getDeaths());
         if(cp.getDeaths() == 0) kdr = cp.getKills();
 
@@ -73,12 +71,14 @@ public class StatsGUI extends CustomGUI {
                 .addLore("&aHighest Kill Streak: &f" + cp.getHighestKillStreak());
         setItem(30, book.build());
 
-        ItemBuilder skull = new ItemBuilder(Material.PLAYER_HEAD)
+        /*ItemBuilder skull = new ItemBuilder(Material.PLAYER_HEAD)
                 .setDisplayName("&aLevel: &f" + lp.getLevel())
                 .addLore("&aExperience: &f" + lp.getExperience())
                 .addLore("")
                 .addLore("&aYou need &f" + (LevelsAPI.getRequiredExp(lp.getLevel()) - lp.getExperience()) + " &aexperience to level up.");
         setItem(32, skull.build());
+
+         */
     }
 
     private void fillers() {

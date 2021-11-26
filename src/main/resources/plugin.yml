@@ -6,10 +6,9 @@ api-version: 1.16
 author: ElytraPvP
 
 depend:
-  - ElytraPvP
-  - Levels
+  - ElytraCore
   - PlaceholderAPI
-  - floodgate-bukkit
+  - floodgate
 
 commands:
   admin:
@@ -38,3 +37,6 @@ commands:
   eventshop:
     usage: /<command>
     description: Open the event shop
+  maps:
+    usage: /<command>
+    description: View all available plugin maps.

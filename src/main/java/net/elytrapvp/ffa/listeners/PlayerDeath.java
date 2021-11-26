@@ -6,8 +6,6 @@ import net.elytrapvp.ffa.enums.DeathType;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.KillMessage;
 import net.elytrapvp.ffa.utils.LocationUtils;
-import net.elytrapvp.levels.api.LevelsAPI;
-import net.elytrapvp.levels.api.LevelsPlayer;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
@@ -62,9 +60,6 @@ public class PlayerDeath implements Listener {
                 ek.addCoins(coins);
                 ek.setLifetimeCoins(ek.getLifetimeCoins() + coins);
 
-                LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(k.getUniqueId());
-                lp.addExperience(15);
-
                 int ks = ek.getKillStreak();
 
                 Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> {
@@ -82,6 +77,9 @@ public class PlayerDeath implements Listener {
                         ek.addBounty(10);
                     }
                 }, 1);
+
+                //LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(k.getUniqueId());
+                //lp.addExperience(15);
             }
 
             return;

@@ -1,6 +1,8 @@
 package net.elytrapvp.ffa.listeners;
 
+import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
+import net.elytrapvp.ffa.inventories.PracticeGUI;
 import net.elytrapvp.ffa.managers.SettingsManager;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Spectator;
@@ -70,6 +72,14 @@ public class PlayerInteract implements Listener {
             }
             case "Leave" -> {
                 Spectator.remove(p);
+                e.setCancelled(true);
+            }
+            case "Maps" -> {
+                p.performCommand("maps");
+                e.setCancelled(true);
+            }
+            case "Practice" -> {
+                new PracticeGUI(FFA.getPlugin()).open(p);
                 e.setCancelled(true);
             }
         }

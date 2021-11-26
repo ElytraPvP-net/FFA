@@ -48,6 +48,8 @@ public class FFA extends JavaPlugin {
 
         // Set Event
         Event.setCurrentEvent(Event.valueOf(settings.getConfig().getString("Event")));
+
+        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
     }
 
     @Override
@@ -68,7 +70,7 @@ public class FFA extends JavaPlugin {
         new Achievement("Dominator", "Reach a kill streak of 15", 6, 0, 0);
         new Achievement("The Assassin", "Reach a kill streak of 30", 7, 0, 0);
 
-        new Achievement("Ca-Ching", "Earn a total of 2,500 coins", 8, 0, 0);
+        new Achievement("Cha-Ching", "Earn a total of 2,500 coins", 8, 0, 0);
         new Achievement("Ooh, Money", "Earn a total of 5,000 coins", 9, 0, 0);
         new Achievement("Money Maker", "Earn a total of 10,000 coins", 10, 0, 0);
         new Achievement("Banker", "Have 2,000 coins at one time", 11, 0, 0);
@@ -108,6 +110,7 @@ public class FFA extends JavaPlugin {
         getCommand("stats").setExecutor(new StatsCMD());
         getCommand("bounty").setExecutor(new BountyCMD());
         getCommand("eventshop").setExecutor(new EventShopCMD());
+        getCommand("maps").setExecutor(new MapsCMD(this));
     }
 
     /**
@@ -167,7 +170,6 @@ public class FFA extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityDamageByEntity(), this);
         getServer().getPluginManager().registerEvents(new EntityPickupItem(), this);
         getServer().getPluginManager().registerEvents(new EntityShootBow(), this);
-        getServer().getPluginManager().registerEvents(new ExpGain(), this);
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new ParkourComplete(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeath(), this);

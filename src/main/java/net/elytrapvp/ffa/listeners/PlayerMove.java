@@ -1,5 +1,6 @@
 package net.elytrapvp.ffa.listeners;
 
+import net.elytrapvp.elytrapvp.chat.ChatUtils;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.events.PlayerDrownEvent;
@@ -10,7 +11,6 @@ import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Kit;
 import net.elytrapvp.ffa.objects.Spectator;
 import net.elytrapvp.ffa.utils.LocationUtils;
-import net.elytrapvp.levels.utils.ChatUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;

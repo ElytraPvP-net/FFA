@@ -17,7 +17,7 @@ public class HealerKit extends Kit {
         ItemStack bow = new ItemBuilder(Material.BOW)
                 .setDisplayName("&aHealer Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 3)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 2)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
         addItem(0, bow);

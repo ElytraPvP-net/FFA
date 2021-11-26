@@ -11,8 +11,6 @@ import net.elytrapvp.ffa.objects.Hat;
 import net.elytrapvp.ffa.objects.Spectator;
 import net.elytrapvp.ffa.scoreboards.FFAScoreboard;
 import net.elytrapvp.ffa.utils.LocationUtils;
-import net.elytrapvp.levels.api.LevelsAPI;
-import net.elytrapvp.levels.api.LevelsPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -20,6 +18,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class PlayerJoin implements Listener {
     SettingsManager settings = SettingsManager.getInstance();
@@ -47,9 +46,10 @@ public class PlayerJoin implements Listener {
         p.setHealth(20);
 
         p.getInventory().clear();
+        p.getInventory().setItem(7, new ItemBuilder(Material.IRON_SWORD).setDisplayName("&aPractice").build());
         p.getInventory().setItem(1, new ItemBuilder(Material.EMERALD).setDisplayName("&aCosmetics").build());
         p.getInventory().setItem(4, new ItemBuilder(Material.NETHER_STAR).setDisplayName("&aKit Selector").build());
-        p.getInventory().setItem(7, new ItemBuilder(Material.BOOK).setDisplayName("&aAchievements").build());
+        //p.getInventory().setItem(7, new ItemBuilder(Material.PAPER).setDisplayName("&aMaps").build());
         p.getInventory().setItem(8, new SkullBuilder(p).setDisplayName("&aStats").build());
 
         p.setGameMode(GameMode.SURVIVAL);
@@ -74,13 +74,13 @@ public class PlayerJoin implements Listener {
 
             new FFAScoreboard(p);
 
-            LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(p.getUniqueId());
-            int level = lp.getLevel();
-            float exp = lp.getExperience();
-            float maxExp = LevelsAPI.getRequiredExp(level);
+            //LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(p.getUniqueId());
+            //int level = lp.getLevel();
+            //float exp = lp.getExperience();
+            //float maxExp = LevelsAPI.getRequiredExp(level);
 
-            p.setLevel(level);
-            p.setExp(exp / maxExp);
+            //p.setLevel(level);
+            //p.setExp(exp / maxExp);
         }, 5);
     }
 }

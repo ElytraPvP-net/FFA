@@ -1,7 +1,6 @@
 package net.elytrapvp.ffa;
 
 import net.elytrapvp.ffa.managers.SettingsManager;
-import net.elytrapvp.levels.Levels;
 
 import java.sql.*;
 
@@ -54,7 +53,7 @@ public class MySQL {
                 return;
             }
 
-            synchronized(Levels.class) {
+            synchronized(FFA.class) {
                 if (connection != null && !connection.isClosed()) {
                     return;
                 }

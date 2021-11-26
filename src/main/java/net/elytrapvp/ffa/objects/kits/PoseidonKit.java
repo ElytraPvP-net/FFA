@@ -34,7 +34,7 @@ public class PoseidonKit extends Kit {
                 .build();
         addItem(1, bow);
 
-        setHealth(16);
+        setHealth(20);
         setPrice(400);
     }
 
