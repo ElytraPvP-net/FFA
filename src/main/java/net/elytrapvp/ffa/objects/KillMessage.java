@@ -39,7 +39,7 @@ public class KillMessage {
 
         ItemBuilder builder = new ItemBuilder(Material.GRAY_DYE)
                 .setDisplayName(message)
-                .addLore("&7Price: " + price + " Coins")
+                .addLore("&6Price: " + price + " Coins")
                 .addLore("&7Click to purchase.");
         return builder.build();
     }
