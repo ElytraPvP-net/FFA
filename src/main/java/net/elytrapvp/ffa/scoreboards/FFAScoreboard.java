@@ -21,7 +21,8 @@ public class FFAScoreboard extends CustomScoreboard {
             helper = ScoreHelper.createScore(p);
         }
 
-        helper.setTitle("&2&lElytraPvP");
+        helper.setTitle("&a&lElytraPvP");
+        helper.setSlot(14,  "&7&m------------------");
         helper.setSlot(13, "&aCoins");
         helper.setSlot(12, PlaceholderAPI.setPlaceholders(p, "%ep_coins%"));
         helper.setSlot(11, "");
@@ -33,7 +34,7 @@ public class FFAScoreboard extends CustomScoreboard {
         helper.setSlot(5, "");
         helper.setSlot(4, "&aKill Streak");
         helper.setSlot(3, PlaceholderAPI.setPlaceholders(p, "%ep_killstreak%"));
-        helper.setSlot(2, "");
-        helper.setSlot(1, "&2play.elytrapvp.net");
+        helper.setSlot(2, "&7&m------------------");
+        helper.setSlot(1, "&aplay.elytrapvp.net");
     }
 }
