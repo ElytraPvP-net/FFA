@@ -1,5 +1,7 @@
 package net.elytrapvp.ffa.listeners;
 
+import com.viaversion.viaversion.api.Via;
+import com.viaversion.viaversion.api.ViaAPI;
 import net.elytrapvp.elytrapvp.chat.ChatUtils;
 import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.elytrapvp.items.SkullBuilder;
@@ -63,6 +65,10 @@ public class PlayerJoin implements Listener {
         ChatUtils.chat(p, "&aDiscord &8- &fdiscord.elytrapvp.net");
         ChatUtils.chat(p, "&aWebsite &8- &fhttp://www.elytrapvp.net");
         p.sendMessage("");
+
+        if(Via.getAPI().getPlayerVersion(p.getUniqueId()) < 316) {
+            ChatUtils.chat(p, "&c&lThis mode requires 1.11.2 or newer!");
+        }
 
         Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> {
             // Add a player's hat.
