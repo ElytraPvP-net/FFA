@@ -9,6 +9,7 @@ depend:
   - ElytraCore
   - PlaceholderAPI
   - floodgate
+  - ViaVersion
 
 commands:
   admin:
