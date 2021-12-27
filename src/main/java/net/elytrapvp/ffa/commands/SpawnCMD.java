@@ -21,7 +21,7 @@ public class SpawnCMD implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Exit if not a player
         if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&lError &8» &cOnly players can use that command.");
+            ChatUtils.chat(sender, "&c&lError &8» &cOnly players can use that command.");
             return true;
         }
 
@@ -39,7 +39,7 @@ public class SpawnCMD implements CommandExecutor {
             return true;
         }
 
-        ChatUtils.chat(p, "&2&lTeleport &8- &aTeleporting in &f5 &aseconds...");
+        ChatUtils.chat(p, "&a&lTeleport &8» &aTeleporting in &f5 &aseconds...");
         BukkitScheduler scheduler = Bukkit.getScheduler();
         scheduler.scheduleSyncDelayedTask(FFA.getPlugin(), () -> {
             cp.setStatus(Status.OTHER);

@@ -41,10 +41,10 @@ public class PlayerDeath implements Listener {
                             .replace("%player%", p.getName())
                             .replace("%killer%", k.getName());
 
-                    e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &r" + message));
+                    e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &r" + message));
                 }
                 else {
-                    e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &f" + p.getName() + " &awas rekt by &f" + k.getName() + "&a."));
+                    e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &f" + p.getName() + " &awas rekt by &f" + k.getName() + "&a."));
                 }
 
                 ek.addKills(1);
@@ -64,16 +64,16 @@ public class PlayerDeath implements Listener {
 
                 Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> {
                     if(cp.getBounty() > 0) {
-                        ChatUtils.chat(k, "&2&lBounty &8- &aYou have killed a wanted player and collected &f" + cp.getBounty() + "&acoins.");
+                        ChatUtils.chat(k, "&a&lBounty &8» &aYou have killed a wanted player and collected &f" + cp.getBounty() + "&acoins.");
                         cp.setBounty(0);
                     }
 
                     if(ks % 3 == 0 && ks != 0) {
-                        Bukkit.broadcastMessage(ChatUtils.translate("&2&lKill Streak &8- &f" + k.getName() + " &ais on a kill streak of &f" + ks + "&a!"));
+                        Bukkit.broadcastMessage(ChatUtils.translate("&a&lKill Streak &8» &f" + k.getName() + " &ais on a kill streak of &f" + ks + "&a!"));
                     }
 
                     if(ks % 5 == 0) {
-                        Bukkit.broadcastMessage(ChatUtils.translate("&2&lBounty &8- &aA bounty of &f10 &acoin has been placed on &f" + k.getName() + " &afor high kill streak."));
+                        Bukkit.broadcastMessage(ChatUtils.translate("&a&lBounty &8» &aA bounty of &f10 &acoin has been placed on &f" + k.getName() + " &afor high kill streak."));
                         ek.addBounty(10);
                     }
                 }, 1);
@@ -88,20 +88,20 @@ public class PlayerDeath implements Listener {
         if(DeathType.list.containsKey(p.getUniqueId())) {
             switch(DeathType.list.get(p.getUniqueId())) {
                 case ESCAPE:
-                    e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &f" + p.getName() + " &atried to escape."));
+                    e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &f" + p.getName() + " &atried to escape."));
                     break;
 
                 case GROUND:
-                    e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &f" + p.getName() + " &atried to land."));
+                    e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &f" + p.getName() + " &atried to land."));
                     break;
 
                 case WATER:
-                    e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &f" + p.getName() + " &adrowned."));
+                    e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &f" + p.getName() + " &adrowned."));
                     break;
             }
         }
         else {
-            e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &f" + p.getName() + " &adied."));
+            e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &f" + p.getName() + " &adied."));
         }
     }
 }

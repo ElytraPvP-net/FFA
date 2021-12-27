@@ -93,7 +93,7 @@ public class ArrowTrail {
         // Run if already unlocked.
         if(ep.getUnlockedArrowTrails().contains(id)) {
             ep.setArrowTrail(id);
-            ChatUtils.chat(p, "&2&lArrow Trails &8- &aArrow Trail has been equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aArrow Trail has been equipped.");
             return;
         }
 
@@ -105,9 +105,9 @@ public class ArrowTrail {
             ep.removeCoins(price);
             ep.unlockArrowTrail(id);
             ep.setArrowTrail(id);
-            ChatUtils.chat(p, "&2&lArrow Trails &8- &aArrow Trail has been purchased and equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aArrow Trail has been purchased and equipped.");
             return;
         }
-        ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins for that.");
+        ChatUtils.chat(p, "&c&lError &8» &cYou do not have enough coins for that.");
     }
 }

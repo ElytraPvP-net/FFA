@@ -78,7 +78,7 @@ public class HatsGUI extends CustomGUI {
             ep.setHat(0);
             p.getInventory().clear(39);
             p.closeInventory();
-            ChatUtils.chat(p, "&2&lCosmetics - &aHat has been reset.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aHat has been reset.");
         });
     }
 

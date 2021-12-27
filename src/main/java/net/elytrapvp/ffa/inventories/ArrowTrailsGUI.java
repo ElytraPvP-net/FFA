@@ -58,7 +58,7 @@ public class ArrowTrailsGUI extends CustomGUI {
             ep.setArrowTrail(0);
             p.getInventory().clear(39);
             p.closeInventory();
-            ChatUtils.chat(p, "&2&lCosmetics - &aArrow Trail has been reset.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aArrow Trail has been reset.");
         });
     }
 

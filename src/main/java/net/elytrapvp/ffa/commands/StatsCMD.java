@@ -15,7 +15,7 @@ public class StatsCMD implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Exit if sender is not a player.
         if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&lError &8» &cOnly players can use that command.");
+            ChatUtils.chat(sender, "&c&lError &8» &cOnly players can use that command.");
             return true;
         }
 
@@ -29,7 +29,7 @@ public class StatsCMD implements CommandExecutor {
         OfflinePlayer t = Bukkit.getOfflinePlayer(args[0]);
 
         if(!CustomPlayer.exists(t.getUniqueId())) {
-            ChatUtils.chat(p, "&lError &8» &cThat player has never joined.");
+            ChatUtils.chat(p, "&c&lError &8» &cThat player has never joined.");
             return true;
         }
 

@@ -15,13 +15,13 @@ public class SetPosition implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Return if sender is not a player.
         if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&lError &8» &cOnly players can use that command.");
+            ChatUtils.chat(sender, "&c&lError &8» &cOnly players can use that command.");
             return true;
         }
 
         // Exit if no arguments.
         if(args.length == 0) {
-            ChatUtils.chat(sender, "&2&lUsage &8- &c/ep setposition [number]");
+            ChatUtils.chat(sender, "&c&lUsage &8» &c/ep setposition [number]");
             return true;
         }
 
@@ -29,7 +29,7 @@ public class SetPosition implements CommandExecutor {
 
         // Exit if position is not equal to 1 or 2.
         if(pos != 1 && pos != 2) {
-            ChatUtils.chat(sender, "&lError &8» &cPosition must be either 1 or 2.");
+            ChatUtils.chat(sender, "&c&lError &8» &cPosition must be either 1 or 2.");
             return true;
         }
 

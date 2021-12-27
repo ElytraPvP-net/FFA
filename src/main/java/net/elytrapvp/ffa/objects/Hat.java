@@ -85,7 +85,7 @@ public class Hat {
         if(ep.getUnlockedHats().contains(id)) {
             p.getInventory().setHelmet(getHat());
             ep.setHat(id);
-            ChatUtils.chat(p, "&2&lHats &8- &aHat has been equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aHat has been equipped.");
             return;
         }
 
@@ -98,9 +98,9 @@ public class Hat {
             ep.unlockHat(id);
             ep.setHat(id);
             p.getInventory().setHelmet(getHat());
-            ChatUtils.chat(p, "&2&lHats &8- &aHat has been purchased and equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aHat has been purchased and equipped.");
             return;
         }
-        ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins for that.");
+        ChatUtils.chat(p, "&c&lError &8» &cYou do not have enough coins for that.");
     }
 }

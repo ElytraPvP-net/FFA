@@ -79,7 +79,7 @@ public class Tag {
         // Run if already unlocked.
         if(ep.getUnlockedTags().contains(getNumber())) {
             ep.setTag(number);
-            ChatUtils.chat(p, "&2&lTags &8- &aTag has been equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aTag has been equipped.");
             return;
         }
 
@@ -91,9 +91,9 @@ public class Tag {
             ep.removeCoins(price);
             ep.unlockTag(number);
             ep.setTag(number);
-            ChatUtils.chat(p, "&2&lTags &8- &aTag has been purchased and equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aTag has been purchased and equipped.");
             return;
         }
-        ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins for that.");
+        ChatUtils.chat(p, "&c&lError &8» &cYou do not have enough coins for that.");
     }
 }

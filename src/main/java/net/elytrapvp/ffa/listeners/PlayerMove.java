@@ -101,7 +101,7 @@ public class PlayerMove implements Listener {
                 }
                 case 0 -> {
                     p.teleport(LocationUtils.getSpawn());
-                    ChatUtils.chat(p, "&lError &8» &cYou have not selected a kit yet.");
+                    ChatUtils.chat(p, "&c&lError &8» &cYou have not selected a kit yet.");
                 }
                 default -> {
                     cp.setStatus(Status.ARENA);

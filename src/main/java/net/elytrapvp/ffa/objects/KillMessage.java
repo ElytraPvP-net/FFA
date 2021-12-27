@@ -66,7 +66,7 @@ public class KillMessage {
         // Run if already unlocked.
         if(ep.getUnlockedKillMessages().contains(getID())) {
             ep.setKillMessage(getID());
-            ChatUtils.chat(p, "&2&lKill Messages &8- &aKill Message has been equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aKill Message has been equipped.");
             return;
         }
 
@@ -78,9 +78,9 @@ public class KillMessage {
             ep.removeCoins(price);
             ep.unlockKillMessage(getID());
             ep.setKillMessage(getID());
-            ChatUtils.chat(p, "&2&lKill Messages &8- &aKill Message has been purchased and equipped.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aKill Message has been purchased and equipped.");
             return;
         }
-        ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins for that.");
+        ChatUtils.chat(p, "&c&lError &8» &cYou do not have enough coins for that.");
     }
 }

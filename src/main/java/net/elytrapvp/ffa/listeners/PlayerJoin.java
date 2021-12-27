@@ -60,7 +60,7 @@ public class PlayerJoin implements Listener {
         });
 
         p.sendMessage("");
-        ChatUtils.centeredChat(p, "&2&lElytraPvP");
+        ChatUtils.centeredChat(p, "&a&lElytraPvP");
         p.sendMessage("");
         ChatUtils.chat(p, "&aDiscord &8- &fdiscord.elytrapvp.net");
         ChatUtils.chat(p, "&aWebsite &8- &fhttp://www.elytrapvp.net");

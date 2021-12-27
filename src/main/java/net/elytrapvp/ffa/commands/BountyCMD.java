@@ -22,13 +22,13 @@ public class BountyCMD implements CommandExecutor {
 
         // Exit if no args
         if(args.length == 0) {
-            ChatUtils.chat(p, "&2&lBounty &8- &aThere is currently a bounty of &f" + ep.getBounty() + " &acoins for you.");
+            ChatUtils.chat(p, "&a&lBounty &8» &aThere is currently a bounty of &f" + ep.getBounty() + " &acoins for you.");
             return true;
         }
 
         // Exit if not enough args
         if(args.length < 3 || args[1].equalsIgnoreCase("add")) {
-            ChatUtils.chat(p, "&2&lUsage &8- &c/bounty add [player] [amount]");
+            ChatUtils.chat(p, "&c&lUsage &8» &c/bounty add [player] [amount]");
             return true;
         }
 
@@ -39,25 +39,25 @@ public class BountyCMD implements CommandExecutor {
             coins = Integer.parseInt(args[2]);
         }
         catch (NumberFormatException e) {
-            ChatUtils.chat(p, "&2&lUsage &8- &c/bounty add [player] [amount]");
+            ChatUtils.chat(p, "&c&lUsage &8» &c/bounty add [player] [amount]");
             return true;
         }
 
         // Exit if player is not online
         if(t == null) {
-            ChatUtils.chat(p, "&lError &8» &cThat player is not online.");
+            ChatUtils.chat(p, "&c&lError &8» &cThat player is not online.");
             return true;
         }
 
         // Exit if invalid coin amount.
         if(coins < 1) {
-            ChatUtils.chat(p, "&lError &8» &cMust be at least 1 coin.");
+            ChatUtils.chat(p, "&c&lError &8» &cMust be at least 1 coin.");
             return true;
         }
 
         // Exit if not enough coins.
         if(ep.getCoins() < coins) {
-            ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins.");
+            ChatUtils.chat(p, "&c&lError &8» &cYou do not have enough coins.");
             return true;
         }
 
@@ -65,7 +65,7 @@ public class BountyCMD implements CommandExecutor {
         et.addBounty(coins);
         ep.removeCoins(coins);
 
-        Bukkit.broadcastMessage(ChatUtils.translate("&2&lBounty &8- &f" + p.getName() + " &ahas placed a bounty of &f" + coins + " &acoins for &f" + t.getName() + "&a."));
+        Bukkit.broadcastMessage(ChatUtils.translate("&a&lBounty &8» &f" + p.getName() + " &ahas placed a bounty of &f" + coins + " &acoins for &f" + t.getName() + "&a."));
         return true;
     }
 }

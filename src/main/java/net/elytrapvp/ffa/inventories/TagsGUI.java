@@ -59,7 +59,7 @@ public class TagsGUI extends CustomGUI {
             ep.setTag(0);
             p.getInventory().clear(39);
             p.closeInventory();
-            ChatUtils.chat(p, "&2&lCosmetics - &aTag has been reset.");
+            ChatUtils.chat(p, "&a&lCosmetics &8» &aTag has been reset.");
         });
     }
 
