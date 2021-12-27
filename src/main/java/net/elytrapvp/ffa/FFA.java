@@ -5,6 +5,7 @@ import net.elytrapvp.ffa.enums.Event;
 import net.elytrapvp.ffa.enums.HatType;
 import net.elytrapvp.ffa.enums.TagType;
 import net.elytrapvp.ffa.listeners.*;
+import net.elytrapvp.ffa.managers.LeaderboardManager;
 import net.elytrapvp.ffa.managers.SettingsManager;
 import net.elytrapvp.ffa.objects.*;
 import net.elytrapvp.ffa.objects.kits.*;
@@ -18,6 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class FFA extends JavaPlugin {
     private static final SettingsManager settings = SettingsManager.getInstance();
     private static FFA plugin;
+    private LeaderboardManager leaderboardManager;
 
     @Override
     public void onEnable() {
@@ -50,6 +52,8 @@ public class FFA extends JavaPlugin {
         Event.setCurrentEvent(Event.valueOf(settings.getConfig().getString("Event")));
 
         Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
+
+        leaderboardManager = new LeaderboardManager(this);
     }
 
     @Override
@@ -105,7 +109,7 @@ public class FFA extends JavaPlugin {
         getCommand("admin").setExecutor(new AdminCMD());
         getCommand("cosmetics").setExecutor(new CosmeticsCMD());
         getCommand("kits").setExecutor(new KitsCMD());
-        getCommand("leaderboards").setExecutor(new LeaderboardCMD());
+        getCommand("leaderboards").setExecutor(new LeaderboardCMD(this));
         getCommand("spawn").setExecutor(new SpawnCMD());
         getCommand("stats").setExecutor(new StatsCMD());
         getCommand("bounty").setExecutor(new BountyCMD());
@@ -210,5 +214,9 @@ public class FFA extends JavaPlugin {
 
             new Tag(tag, id, price, type);
         }
+    }
+
+    public LeaderboardManager getLeaderboardManager() {
+        return leaderboardManager;
     }
 }

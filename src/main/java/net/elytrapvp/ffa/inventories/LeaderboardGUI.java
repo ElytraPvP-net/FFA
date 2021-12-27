@@ -2,26 +2,53 @@ package net.elytrapvp.ffa.inventories;
 
 import net.elytrapvp.elytrapvp.gui.CustomGUI;
 import net.elytrapvp.elytrapvp.items.ItemBuilder;
+import net.elytrapvp.ffa.FFA;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class LeaderboardGUI extends CustomGUI {
-    public LeaderboardGUI() {
-        super(27, "Leaderboard");
+    private final FFA plugin;
+
+    public LeaderboardGUI(FFA plugin) {
+        super(45, "Leaderboard");
+        this.plugin = plugin;
+
         filler();
 
-        setItem(10, new ItemBuilder(Material.BOW).setDisplayName("&aKills").build(), (p,a) -> new TopKillsGUI(p));
-        setItem(12, new ItemBuilder(Material.SKELETON_SKULL).setDisplayName("&aDeaths").build(), (p,a) -> new TopDeathsGUI(p));
-        setItem(14, new ItemBuilder(Material.GOLD_INGOT).setDisplayName("&aCoins").build(), (p,a) -> new TopCoinsGUI(p));
-        setItem(16, new ItemBuilder(Material.PLAYER_HEAD).setDisplayName("&aKill Streak").build(), (p,a) -> new TopKillStreakGUI(p));
+        ItemBuilder kills = new ItemBuilder(Material.BOW).setDisplayName("&a&lKills");
+        addLore(kills, "kills");
+        setItem(19, kills.build());
+
+        ItemBuilder deaths = new ItemBuilder(Material.SKELETON_SKULL).setDisplayName("&a&lDeaths");
+        addLore(deaths, "deaths");
+        setItem(21, deaths.build());
+
+        ItemBuilder coins = new ItemBuilder(Material.GOLD_INGOT).setDisplayName("&a&lCoins");
+        addLore(coins, "coins");
+        setItem(23, coins.build());
+
+        ItemBuilder killStreak = new ItemBuilder(Material.PLAYER_HEAD).setDisplayName("&a&lKill Streak");
+        addLore(killStreak, "highestKillStreak");
+        setItem(25, killStreak.build());
     }
 
     private void filler() {
-        List<Integer> slots = Arrays.asList(0,1,2,3,4,5,6,7,8,9,17,18,19,20,21,22,23,24,25,26);
+        List<Integer> slots = Arrays.asList(0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44);
         ItemStack filler = new ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setDisplayName("").build();
         slots.forEach(i -> setItem(i, filler));
+    }
+
+    private void addLore(ItemBuilder builder, String type) {
+        Map<String, Integer> leaderboard = plugin.getLeaderboardManager().getLeaderboard(type);
+
+        int i = 1;
+        for(String player : leaderboard.keySet()) {
+            builder.addLore("&a#" + i + ". &f" + player + "&a: " + leaderboard.get(player));
+            i++;
+        }
     }
 }
