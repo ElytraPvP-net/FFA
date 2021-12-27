@@ -14,7 +14,7 @@ public class CosmeticsGUI extends CustomGUI {
         super(27,"Cosmetics");
 
         filler();
-        setItem(10, new ItemBuilder(Material.PLAYER_HEAD).setDisplayName("&aHats").build(), (p,a) -> new HatCategoriesGUI().open(p));
+        setItem(10, new ItemBuilder(Material.PLAYER_HEAD).setDisplayName("&aHats").build(), (p,a) -> new HatsGUI().open(p));
         setItem(12, new ItemBuilder(Material.OAK_SIGN).setDisplayName("&aKill Messages").build(), (p,a) -> new KillMessagesGUI(p, 1).open(p));
         setItem(14, new ItemBuilder(Material.NAME_TAG).setDisplayName("&aTags").build(), (p,a) -> new TagsGUI(p, 1, TagType.NONE).open(p));
         setItem(16, new ItemBuilder(Material.ARROW).setDisplayName("&aArrow Trails").build(), (p,a) -> new ArrowTrailsGUI(p, 1).open(p));
