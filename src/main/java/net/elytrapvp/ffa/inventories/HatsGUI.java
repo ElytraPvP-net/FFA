@@ -19,7 +19,7 @@ public class HatsGUI extends CustomGUI {
         super(54, "Hats");
         filler(Arrays.asList(1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53));
 
-        setItem(0, new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6").setDisplayName("&cBack").build(), (p,a) -> new HatsGUI().open(p));
+        setItem(0, new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6").setDisplayName("&cBack").build(), (p,a) -> new CosmeticsGUI().open(p));
 
         ItemStack animals = new SkullBuilder("5d6c6eda942f7f5f71c3161c7306f4aed307d82895f9d2b07ab4525718edc5").setDisplayName("&aAnimals").build();
         setItem(19, animals, (p,a) -> new HatsGUI(p, 1, HatType.ANIMAL).open(p));
