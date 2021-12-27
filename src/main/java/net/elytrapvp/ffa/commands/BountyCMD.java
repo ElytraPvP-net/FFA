@@ -13,7 +13,7 @@ public class BountyCMD implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Exit if not a player.
         if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&2&lError &8- &cYou must be a player to use that command.");
+            ChatUtils.chat(sender, "&lError &8» &cYou must be a player to use that command.");
             return true;
         }
 
@@ -45,19 +45,19 @@ public class BountyCMD implements CommandExecutor {
 
         // Exit if player is not online
         if(t == null) {
-            ChatUtils.chat(p, "&2&lError &8- &cThat player is not online.");
+            ChatUtils.chat(p, "&lError &8» &cThat player is not online.");
             return true;
         }
 
         // Exit if invalid coin amount.
         if(coins < 1) {
-            ChatUtils.chat(p, "&2&lError &8- &cMust be at least 1 coin.");
+            ChatUtils.chat(p, "&lError &8» &cMust be at least 1 coin.");
             return true;
         }
 
         // Exit if not enough coins.
         if(ep.getCoins() < coins) {
-            ChatUtils.chat(p, "&2&lError &8- &cYou do not have enough coins.");
+            ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins.");
             return true;
         }
 

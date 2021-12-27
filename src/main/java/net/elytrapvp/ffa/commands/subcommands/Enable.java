@@ -13,19 +13,19 @@ public class Enable implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Exit if already enabled.
         if(settings.getConfig().getBoolean("Enabled")) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cPlugin already enabled.");
+            ChatUtils.chat(sender, "&lError &8» &cPlugin already enabled.");
             return true;
         }
 
         // Exit if spawn not set.
         if(!settings.getConfig().getBoolean("Spawn.Set")) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cSpawn has not been set.");
+            ChatUtils.chat(sender, "&lError &8» &cSpawn has not been set.");
             return true;
         }
 
         // Exit if positions not set.
         if(settings.getConfig().getInt("Arena.Pos1.y") == -1 || settings.getConfig().getInt("Arena.Pos2.y") == -1) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cPositions have not been set.");
+            ChatUtils.chat(sender, "&lError &8» &cPositions have not been set.");
             return true;
         }
 

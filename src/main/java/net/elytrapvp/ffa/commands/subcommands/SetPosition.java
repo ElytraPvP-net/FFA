@@ -15,7 +15,7 @@ public class SetPosition implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Return if sender is not a player.
         if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cOnly players can use that command.");
+            ChatUtils.chat(sender, "&lError &8» &cOnly players can use that command.");
             return true;
         }
 
@@ -29,7 +29,7 @@ public class SetPosition implements CommandExecutor {
 
         // Exit if position is not equal to 1 or 2.
         if(pos != 1 && pos != 2) {
-            ChatUtils.chat(sender, "&c&l(&7!&c&l) &cPosition must be either 1 or 2.");
+            ChatUtils.chat(sender, "&lError &8» &cPosition must be either 1 or 2.");
             return true;
         }
 

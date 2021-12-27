@@ -47,7 +47,7 @@ public class KitsGUI extends CustomGUI {
                             Bukkit.getPluginManager().callEvent(new KitUnlockEvent(cp, kit));
                         }
                         else {
-                            ChatUtils.chat(player, "&c&l(&7!&c&l) &cYou do not have enough coins.");
+                            ChatUtils.chat(player, "&lError &8» &cYou do not have enough coins.");
                             player.closeInventory();
                         }
                     }

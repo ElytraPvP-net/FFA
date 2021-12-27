@@ -81,6 +81,6 @@ public class KillMessage {
             ChatUtils.chat(p, "&2&lKill Messages &8- &aKill Message has been purchased and equipped.");
             return;
         }
-        ChatUtils.chat(p, "&2&lError &8- &cYou do not have enough coins for that.");
+        ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins for that.");
     }
 }

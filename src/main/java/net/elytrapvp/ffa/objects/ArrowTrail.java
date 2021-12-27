@@ -108,6 +108,6 @@ public class ArrowTrail {
             ChatUtils.chat(p, "&2&lArrow Trails &8- &aArrow Trail has been purchased and equipped.");
             return;
         }
-        ChatUtils.chat(p, "&2&lError &8- &cYou do not have enough coins for that.");
+        ChatUtils.chat(p, "&lError &8» &cYou do not have enough coins for that.");
     }
 }
