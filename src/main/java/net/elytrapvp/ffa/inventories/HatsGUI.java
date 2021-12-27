@@ -55,7 +55,7 @@ public class HatsGUI extends CustomGUI {
             s++;
         }
 
-        filler(Arrays.asList(1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,44,45,46,47,48,49,50,51,52,53));
+        filler(Arrays.asList(1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53));
 
         if(page == 1) {
             setItem(38, new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6").setDisplayName("&cNo more pages!").build());

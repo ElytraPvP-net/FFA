@@ -63,7 +63,7 @@ public class ArrowTrailsGUI extends CustomGUI {
     }
 
     private void fillers() {
-        List<Integer> slots = Arrays.asList(1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,44,45,46,47,48,49,50,51,52,53);
+        List<Integer> slots = Arrays.asList(1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53);
         ItemStack filler = new ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setDisplayName(" ").build();
         slots.forEach(i -> setItem(i, filler));
     }
