@@ -25,7 +25,7 @@ commands:
   leaderboards:
     usage: /<command>
     description: View the server leaderboards
-    aliases: [top]
+    aliases: [top,lb]
   spawn:
     usage: /<command>
     description: Teleport to spawn
