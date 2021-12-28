@@ -29,6 +29,15 @@ public class InventoryClick implements Listener {
             return;
         }
 
+        if(cp.getStatus() == Status.ARENA) {
+            switch (e.getAction()) {
+                case PLACE_ONE, PLACE_SOME, PICKUP_ONE, PICKUP_SOME, PICKUP_HALF -> {
+                    e.setCancelled(true);
+                    return;
+                }
+            }
+        }
+
         if(e.getCurrentItem() == null) {
             return;
         }
