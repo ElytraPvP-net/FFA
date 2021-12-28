@@ -7,6 +7,8 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class TankKit extends Kit {
     public TankKit() {
@@ -20,7 +22,7 @@ public class TankKit extends Kit {
                 .build();
         addItem(0, bow);
 
-        setHealth(26);
+        addEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 99999, 1));
     }
 
     public ItemStack getIcon(Player p) {
