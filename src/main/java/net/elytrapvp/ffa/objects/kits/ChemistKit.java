@@ -33,7 +33,7 @@ public class ChemistKit extends Kit {
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.POTION)
+        ItemBuilder builder = new ItemBuilder(Material.BREWING_STAND)
                 .setDisplayName("&aChemist")
                 .addLore("&7Force your opponents into submission")
                 .addLore("&7with a splash potion.")
