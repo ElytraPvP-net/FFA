@@ -34,6 +34,12 @@ public class EntityShootBow implements Listener {
             p.getInventory().getItem(slot).setAmount(64);
         }
 
+        // If using Poisoner Kit, replace arrow
+        if(cp.getKit() == 11 && cp.getStatus() == Status.ARENA) {
+            int slot = p.getInventory().first(Material.TIPPED_ARROW);
+            p.getInventory().getItem(slot).setAmount(64);
+        }
+
         // Remove critical particles without lowering damage.
         double damage = a.getDamage();
         a.setCritical(false);
