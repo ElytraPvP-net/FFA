@@ -10,6 +10,12 @@ public class PlayerEscape implements Listener {
     @EventHandler
     public void onEscape(PlayerEscapeEvent e) {
         Player p = e.getPlayer();
+
+        // Makes sure the player was previously alive.
+        if(DeathType.list.containsKey(p.getUniqueId())) {
+            return;
+        }
+
         DeathType.list.put(p.getUniqueId(), DeathType.ESCAPE);
         p.setHealth(0);
     }
