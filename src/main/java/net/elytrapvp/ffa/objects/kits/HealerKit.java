@@ -23,6 +23,7 @@ public class HealerKit extends Kit {
         addItem(0, bow);
 
         setPrice(400);
+        setHealth(18);
 
         addEffect(new PotionEffect(PotionEffectType.REGENERATION, Integer.MAX_VALUE, 0));
     }
