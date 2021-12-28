@@ -22,9 +22,13 @@ public class EntityDamage implements Listener {
             return;
         }
 
-        if(cp.getKit() == 7  && e.getCause().equals(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION)) {
-            e.setCancelled(true);
-            return;
+        if(e.getCause().equals(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION)) {
+            if(cp.getKit() == 7) {
+                e.setCancelled(true);
+                return;
+            }
+
+            e.setDamage(e.getDamage() * 2);
         }
 
         if(cp.getStatus() == Status.SPECTATOR) {
