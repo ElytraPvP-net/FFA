@@ -167,6 +167,20 @@ class Placeholders extends PlaceholderExpansion {
             }
         }
 
+        // Get raw tag
+        if(identifier.equals("tag_raw")) {
+
+            if(player.getTag() == 0) {
+                return "";
+            }
+            else {
+                for(Tag t : Tag.getTags().values()) {
+                    if(t.getNumber() == player.getTag()) {
+                        return t.getRawTag() + " ";
+                    }
+                }
+            }
+        }
         return null;
     }
 }

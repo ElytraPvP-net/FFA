@@ -96,4 +96,8 @@ public class Tag {
         }
         ChatUtils.chat(p, "&c&lError &8» &cYou do not have enough coins for that.");
     }
+
+    public String getRawTag() {
+        return tag;
+    }
 }
