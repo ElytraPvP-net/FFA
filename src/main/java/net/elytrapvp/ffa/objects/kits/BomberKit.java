@@ -7,6 +7,7 @@ import net.elytrapvp.ffa.objects.Kit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
@@ -16,13 +17,21 @@ public class BomberKit extends Kit {
     public BomberKit() {
         super("Bomber", 7);
 
+        ItemStack bow = new ItemBuilder(Material.BOW)
+                .setDisplayName("&aBomber Bow")
+                .setUnbreakable(true)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 1)
+                .addEnchantment(Enchantment.ARROW_INFINITE, 1)
+                .build();
+        addItem(0, bow);
+
         ItemStack crossbow = new ItemBuilder(Material.CROSSBOW)
                 .setDisplayName("&aBomber Crossbow")
                 .setUnbreakable(true)
                 .build();
-        addItem(0, crossbow);
         addItem(1, crossbow);
         addItem(2, crossbow);
+        addItem(3, crossbow);
 
         FireworkEffect effect = FireworkEffect.builder()
                 .withColor(Color.RED)
@@ -36,7 +45,7 @@ public class BomberKit extends Kit {
                 .setAmount(64)
                 .build();
         addItem(40, fireworks);
-        addItem(3, new ItemBuilder(Material.FIREWORK_ROCKET, 64).build());
+        addItem(4, new ItemBuilder(Material.FIREWORK_ROCKET, 64).build());
 
         PotionEffect slowFalling = new PotionEffect(PotionEffectType.SLOW_FALLING, 9999, 0);
         addEffect(slowFalling);
