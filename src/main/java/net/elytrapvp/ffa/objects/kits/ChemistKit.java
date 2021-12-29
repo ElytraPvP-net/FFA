@@ -33,7 +33,7 @@ public class ChemistKit extends Kit {
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.BREWING_STAND)
+        ItemBuilder builder = new ItemBuilder(Material.NETHER_WART)
                 .setDisplayName("&aChemist")
                 .addLore("&7Force your opponents into submission")
                 .addLore("&7with a splash potion.")
@@ -50,8 +50,7 @@ public class ChemistKit extends Kit {
                     .addLore("&7Left Click to Purchase")
                     .addLore("&7Right Click to Preview");
         }
-        ItemStack item = builder.build();
-        item.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-        return item;
+
+        return builder.build();
     }
 }
