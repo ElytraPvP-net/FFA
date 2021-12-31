@@ -111,7 +111,7 @@ public class FFA extends JavaPlugin {
         getCommand("kits").setExecutor(new KitsCMD());
         getCommand("leaderboards").setExecutor(new LeaderboardCMD(this));
         getCommand("spawn").setExecutor(new SpawnCMD());
-        getCommand("stats").setExecutor(new StatsCMD());
+        getCommand("stats").setExecutor(new StatsCMD(this));
         getCommand("bounty").setExecutor(new BountyCMD());
         getCommand("eventshop").setExecutor(new EventShopCMD());
     }
