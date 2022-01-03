@@ -35,8 +35,8 @@ public class PoisonerKit extends Kit {
     public ItemStack getIcon(Player p) {
         ItemBuilder builder = new ItemBuilder(Material.SPIDER_EYE)
                 .setDisplayName("&aPoisoner")
-                .addLore("&7Force your opponents into submission")
-                .addLore("&7with a splash potion.")
+                .addLore("&7Poison your opponents")
+                .addLore("&7with tipped arrows.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
