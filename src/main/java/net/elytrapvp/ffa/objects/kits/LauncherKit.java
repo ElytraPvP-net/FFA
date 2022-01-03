@@ -30,8 +30,8 @@ public class LauncherKit extends Kit {
     public ItemStack getIcon(Player p) {
         ItemBuilder builder = new ItemBuilder(Material.SLIME_BALL)
                 .setDisplayName("&aLauncher")
-                .addLore("&7Dominate the planes with")
-                .addLore("&7a knockback stick.")
+                .addLore("&7Protect yourself with")
+                .addLore("&7insane knockback.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
