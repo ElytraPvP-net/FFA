@@ -158,13 +158,11 @@ public class FFA extends JavaPlugin {
         new PyroKit();
         new TankKit();
         new ChemistKit();
-        //new StickmanKit();
         new LauncherKit();
         new BomberKit();
         new HealerKit();
         new TeleporterKit();
         new SpectralKit();
-        //new PuncherKit();
         new PoisonerKit();
         new PoseidonKit();
         new CactusKit();
