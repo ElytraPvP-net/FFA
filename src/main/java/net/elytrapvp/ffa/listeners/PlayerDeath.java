@@ -30,7 +30,7 @@ public class PlayerDeath implements Listener {
 
             // Check if player is their own killer.
             if(p.getUniqueId().equals(k.getUniqueId())) {
-                e.setDeathMessage(ChatUtils.translate("&2&lDeath &8- &f" + p.getName() + " &aattacked themselves."));
+                e.setDeathMessage(ChatUtils.translate("&a&lDeath &8» &f" + p.getName() + " &aattacked themselves."));
             }
             else {
                 CustomPlayer ek = CustomPlayer.getCustomPlayers().get(k.getUniqueId());
