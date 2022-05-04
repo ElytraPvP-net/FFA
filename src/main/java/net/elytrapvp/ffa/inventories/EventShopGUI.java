@@ -1,10 +1,10 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.elytrapvp.gui.CustomGUI;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.SkullBuilder;
 import net.elytrapvp.ffa.enums.HatType;
 import net.elytrapvp.ffa.enums.TagType;
+import net.elytrapvp.ffa.utilities.gui.CustomGUI;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.SkullBuilder;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 

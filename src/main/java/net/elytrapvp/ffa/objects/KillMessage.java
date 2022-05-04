@@ -1,7 +1,7 @@
 package net.elytrapvp.ffa.objects;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;

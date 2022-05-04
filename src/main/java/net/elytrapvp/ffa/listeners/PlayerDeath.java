@@ -1,11 +1,11 @@
 package net.elytrapvp.ffa.listeners;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.DeathType;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.KillMessage;
-import net.elytrapvp.ffa.utils.LocationUtils;
+import net.elytrapvp.ffa.utilities.LocationUtils;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;

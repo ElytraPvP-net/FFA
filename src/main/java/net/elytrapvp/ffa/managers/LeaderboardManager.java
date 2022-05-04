@@ -1,8 +1,8 @@
 package net.elytrapvp.ffa.managers;
 
-import net.elytrapvp.elytradb.ElytraDB;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.MySQL;
+import net.elytrapvp.ffa.MySQL2;
 import org.bukkit.Bukkit;
 
 import java.sql.PreparedStatement;
@@ -45,7 +45,7 @@ public class LeaderboardManager {
                     results1.next();
                     String uuid = results1.getString(1);
 
-                    PreparedStatement statement2 = ElytraDB.getDatabase().prepareStatement("SELECT * from player_info WHERE uuid = ? LIMIT 1");
+                    PreparedStatement statement2 = MySQL2.getConnection().prepareStatement("SELECT * from player_info WHERE uuid = ? LIMIT 1");
                     statement2.setString(1, uuid);
                     ResultSet results2 = statement2.executeQuery();
 

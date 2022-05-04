@@ -1,13 +1,13 @@
 package net.elytrapvp.ffa.commands;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.SkullBuilder;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Hat;
-import net.elytrapvp.ffa.utils.LocationUtils;
+import net.elytrapvp.ffa.utilities.LocationUtils;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.SkullBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;

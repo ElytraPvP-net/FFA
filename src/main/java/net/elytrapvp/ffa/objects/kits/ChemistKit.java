@@ -1,13 +1,12 @@
 package net.elytrapvp.ffa.objects.kits;
 
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.PotionBuilder;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.PotionBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;

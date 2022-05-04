@@ -1,9 +1,9 @@
 package net.elytrapvp.ffa.objects.kits;
 
-import net.elytrapvp.elytrapvp.items.FireworkBuilder;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.utilities.item.FireworkBuilder;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;

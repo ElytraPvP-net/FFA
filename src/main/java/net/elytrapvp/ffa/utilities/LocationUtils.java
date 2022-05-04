@@ -1,4 +1,4 @@
-package net.elytrapvp.ffa.utils;
+package net.elytrapvp.ffa.utilities;
 
 import net.elytrapvp.ffa.managers.SettingsManager;
 import org.bukkit.Bukkit;

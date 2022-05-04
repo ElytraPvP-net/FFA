@@ -1,13 +1,12 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.elytrapvp.gui.CustomGUI;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.objects.CustomPlayer;
+import net.elytrapvp.ffa.utilities.gui.CustomGUI;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;

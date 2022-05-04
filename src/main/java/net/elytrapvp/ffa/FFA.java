@@ -35,6 +35,7 @@ public class FFA extends JavaPlugin {
 
         // Connect to MySQL
         MySQL.openConnection();
+        MySQL2.openConnection();
 
         // Load plugin essentials.
         registerCommands();

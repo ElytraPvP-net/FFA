@@ -6,11 +6,9 @@ api-version: 1.17
 author: ElytraPvP
 
 depend:
-  - ElytraCore
   - PlaceholderAPI
   - floodgate
   - ViaVersion
-  - ElytraDB
 
 commands:
   admin:

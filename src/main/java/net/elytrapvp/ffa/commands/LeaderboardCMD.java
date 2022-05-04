@@ -1,8 +1,8 @@
 package net.elytrapvp.ffa.commands;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.inventories.LeaderboardGUI;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

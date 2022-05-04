@@ -1,7 +1,7 @@
 package net.elytrapvp.ffa.commands.subcommands;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
 import net.elytrapvp.ffa.objects.CustomPlayer;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;

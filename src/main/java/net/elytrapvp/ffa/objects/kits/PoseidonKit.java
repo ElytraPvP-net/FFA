@@ -1,8 +1,8 @@
 package net.elytrapvp.ffa.objects.kits;
 
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;

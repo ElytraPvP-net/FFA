@@ -1,11 +1,11 @@
 package net.elytrapvp.ffa.objects;
 
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.SkullBuilder;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.managers.SettingsManager;
-import net.elytrapvp.ffa.utils.LocationUtils;
+import net.elytrapvp.ffa.utilities.LocationUtils;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.SkullBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

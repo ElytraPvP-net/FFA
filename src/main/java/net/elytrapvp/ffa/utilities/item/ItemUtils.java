@@ -1,6 +1,6 @@
-package net.elytrapvp.ffa.utils;
+package net.elytrapvp.ffa.utilities.item;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;

@@ -1,7 +1,7 @@
 package net.elytrapvp.ffa.commands.subcommands;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
 import net.elytrapvp.ffa.managers.SettingsManager;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

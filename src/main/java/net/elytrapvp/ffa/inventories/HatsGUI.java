@@ -1,12 +1,12 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
-import net.elytrapvp.elytrapvp.gui.CustomGUI;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.SkullBuilder;
 import net.elytrapvp.ffa.enums.HatType;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Hat;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
+import net.elytrapvp.ffa.utilities.gui.CustomGUI;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.SkullBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -19,7 +19,7 @@ public class HatsGUI extends CustomGUI {
         super(54, "Hats");
         filler(Arrays.asList(1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53));
 
-        setItem(0, new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6").setDisplayName("&cBack").build(), (p,a) -> new CosmeticsGUI().open(p));
+        setItem(0, new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6").setDisplayName("&cBack").build(), (p, a) -> new CosmeticsGUI().open(p));
 
         ItemStack animals = new SkullBuilder("5d6c6eda942f7f5f71c3161c7306f4aed307d82895f9d2b07ab4525718edc5").setDisplayName("&aAnimals").build();
         setItem(19, animals, (p,a) -> new HatsGUI(p, 1, HatType.ANIMAL).open(p));
@@ -73,7 +73,7 @@ public class HatsGUI extends CustomGUI {
 
         setItem(0, new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6").setDisplayName("&cBack").build(), (p,a) -> new HatsGUI().open(player));
 
-        setItem(40, new ItemBuilder(Material.BARRIER).setDisplayName("&cReset").build(), (p,a ) -> {
+        setItem(40, new ItemBuilder(Material.BARRIER).setDisplayName("&cReset").build(), (p, a ) -> {
             CustomPlayer ep = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
             ep.setHat(0);
             p.getInventory().clear(39);

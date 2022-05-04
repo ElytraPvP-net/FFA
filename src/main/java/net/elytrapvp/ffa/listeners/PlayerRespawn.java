@@ -1,12 +1,12 @@
 package net.elytrapvp.ffa.listeners;
 
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.SkullBuilder;
 import net.elytrapvp.ffa.enums.DeathType;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Hat;
-import net.elytrapvp.ffa.utils.LocationUtils;
+import net.elytrapvp.ffa.utilities.LocationUtils;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.SkullBuilder;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

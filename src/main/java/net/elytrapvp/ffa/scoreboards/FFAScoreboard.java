@@ -1,8 +1,8 @@
 package net.elytrapvp.ffa.scoreboards;
 
 import me.clip.placeholderapi.PlaceholderAPI;
-import net.elytrapvp.elytrapvp.scoreboard.CustomScoreboard;
-import net.elytrapvp.elytrapvp.scoreboard.ScoreHelper;
+import net.elytrapvp.ffa.utilities.scoreboard.CustomScoreboard;
+import net.elytrapvp.ffa.utilities.scoreboard.ScoreHelper;
 import org.bukkit.entity.Player;
 
 public class FFAScoreboard extends CustomScoreboard {

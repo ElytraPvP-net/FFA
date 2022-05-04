@@ -1,10 +1,6 @@
 package net.elytrapvp.ffa.listeners;
 
 import com.viaversion.viaversion.api.Via;
-import com.viaversion.viaversion.api.ViaAPI;
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
-import net.elytrapvp.elytrapvp.items.SkullBuilder;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.managers.SettingsManager;
@@ -12,7 +8,10 @@ import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Hat;
 import net.elytrapvp.ffa.objects.Spectator;
 import net.elytrapvp.ffa.scoreboards.FFAScoreboard;
-import net.elytrapvp.ffa.utils.LocationUtils;
+import net.elytrapvp.ffa.utilities.LocationUtils;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.SkullBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -20,7 +19,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class PlayerJoin implements Listener {
     SettingsManager settings = SettingsManager.getInstance();

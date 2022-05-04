@@ -1,11 +1,11 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.elytrapvp.chat.ChatUtils;
-import net.elytrapvp.elytrapvp.gui.CustomGUI;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.ffa.events.KitUnlockEvent;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.utilities.chat.ChatUtils;
+import net.elytrapvp.ffa.utilities.gui.CustomGUI;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

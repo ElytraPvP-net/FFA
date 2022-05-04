@@ -1,8 +1,8 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.elytrapvp.gui.CustomGUI;
-import net.elytrapvp.elytrapvp.items.ItemBuilder;
 import net.elytrapvp.ffa.FFA;
+import net.elytrapvp.ffa.utilities.gui.CustomGUI;
+import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
