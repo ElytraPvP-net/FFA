@@ -176,6 +176,7 @@ public class FFA extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EntityDamageByEntity(), this);
         getServer().getPluginManager().registerEvents(new EntityPickupItem(), this);
         getServer().getPluginManager().registerEvents(new EntityShootBow(), this);
+        getServer().getPluginManager().registerEvents(new FoodLevelChangeListener(), this);
         getServer().getPluginManager().registerEvents(new InventoryClick(), this);
         getServer().getPluginManager().registerEvents(new ParkourComplete(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
