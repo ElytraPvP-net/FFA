@@ -12,6 +12,8 @@ import net.elytrapvp.ffa.objects.kits.*;
 import net.elytrapvp.ffa.runnables.ArrowTrailSpawn;
 import net.elytrapvp.ffa.runnables.LeaderboardUpdate;
 import net.elytrapvp.ffa.runnables.MySQLHeartBeat;
+import net.elytrapvp.ffa.utilities.gui.GUIListeners;
+import net.elytrapvp.ffa.utilities.scoreboard.ScoreboardListeners;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -189,6 +191,9 @@ public class FFA extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerTeleport(), this);
         getServer().getPluginManager().registerEvents(new ProjectileHit(), this);
         getServer().getPluginManager().registerEvents(new PlayerEscape(), this);
+
+        getServer().getPluginManager().registerEvents(new GUIListeners(), this);
+        getServer().getPluginManager().registerEvents(new ScoreboardListeners(), this);
     }
 
     private void registerRunnables() {
