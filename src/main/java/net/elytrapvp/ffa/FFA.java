@@ -198,8 +198,7 @@ public class FFA extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerMove(this), this);
         getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
         getServer().getPluginManager().registerEvents(new PlayerRespawn(this), this);
-        getServer().getPluginManager().registerEvents(new PlayerTeleport(), this);
-        getServer().getPluginManager().registerEvents(new ProjectileHit(), this);
+        getServer().getPluginManager().registerEvents(new ProjectileHitListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerEscape(), this);
 
         getServer().getPluginManager().registerEvents(new GUIListeners(), this);

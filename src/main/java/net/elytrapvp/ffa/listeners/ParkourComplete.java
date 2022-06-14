@@ -1,7 +1,5 @@
 package net.elytrapvp.ffa.listeners;
 
-import net.elytrapvp.ffa.events.ParkourCompleteEvent;
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
