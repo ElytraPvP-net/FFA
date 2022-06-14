@@ -17,16 +17,16 @@ import java.util.HashMap;
 
 public class ArrowTrail {
     private static final SettingsManager settings = SettingsManager.getInstance();
-    private static HashMap<Arrow, ArrowTrail> arrows = new HashMap<>();
-    private static HashMap<Integer, ArrowTrail> trails = new HashMap<>();
+    private static final HashMap<Arrow, ArrowTrail> arrows = new HashMap<>();
+    private static final HashMap<Integer, ArrowTrail> trails = new HashMap<>();
 
-    private String name;
-    private Particle particle;
-    private int r;
-    private int g;
-    private int b;
-    private int id;
-    private int price;
+    private final String name;
+    private final Particle particle;
+    private final int r;
+    private final int g;
+    private final int b;
+    private final int id;
+    private final int price;
 
     public ArrowTrail(int id) {
         this.id = id;

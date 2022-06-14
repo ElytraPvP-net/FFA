@@ -22,7 +22,6 @@ public class StatsGUI extends CustomGUI {
         fillers();
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(player.getUniqueId());
-        //LevelsPlayer lp = LevelsAPI.getLevelsPlayers().get(player.getUniqueId());
         setItems(cp);
     }
 
@@ -31,7 +30,6 @@ public class StatsGUI extends CustomGUI {
         fillers();
 
         CustomPlayer cp = new CustomPlayer(player.getUniqueId());
-        //LevelsPlayer lp = new LevelsPlayer(player.getUniqueId());
         Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> setItems(cp), 5);
     }
 
@@ -69,15 +67,6 @@ public class StatsGUI extends CustomGUI {
                 .addLore("&aWindows Broken: &f" + cp.getWindowsBroken())
                 .addLore("&aHighest Kill Streak: &f" + cp.getHighestKillStreak());
         setItem(30, book.build());
-
-        /*ItemBuilder skull = new ItemBuilder(Material.PLAYER_HEAD)
-                .setDisplayName("&aLevel: &f" + lp.getLevel())
-                .addLore("&aExperience: &f" + lp.getExperience())
-                .addLore("")
-                .addLore("&aYou need &f" + (LevelsAPI.getRequiredExp(lp.getLevel()) - lp.getExperience()) + " &aexperience to level up.");
-        setItem(32, skull.build());
-
-         */
     }
 
     private void fillers() {

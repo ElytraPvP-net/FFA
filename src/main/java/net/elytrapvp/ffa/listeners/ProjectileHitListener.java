@@ -14,31 +14,31 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 
 import java.util.ArrayList;
 
-public class ProjectileHit implements Listener {
+public class ProjectileHitListener implements Listener {
     ArrayList<Material> panes;
 
     @EventHandler
-    public void onHit(ProjectileHitEvent e) {
+    public void onHit(ProjectileHitEvent event) {
         panes = new ArrayList<>();
         panes.add(Material.GLASS_PANE);
         panes.add(Material.BLACK_STAINED_GLASS_PANE);
 
         // Exit if material is null.
-        if(e.getHitBlock() == null) {
+        if(event.getHitBlock() == null) {
             return;
         }
 
-        Material m = e.getHitBlock().getType();
+        Material material = event.getHitBlock().getType();
 
-        if(!panes.contains(m)) {
+        if(!panes.contains(material)) {
             return;
         }
 
-        breakGlass(e.getEntity(), e.getHitBlock(), m);
+        breakGlass(event.getEntity(), event.getHitBlock(), material);
     }
 
-    private void breakGlass(Entity e, Block b, Material m) {
-       Projectile projectile = (Projectile) e;
+    private void breakGlass(Entity entity, Block block, Material material) {
+       Projectile projectile = (Projectile) entity;
 
        if(!(projectile.getShooter() instanceof Player)) {
            return;
@@ -48,28 +48,28 @@ public class ProjectileHit implements Listener {
        CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
        cp.setWindowsBroken(cp.getWindowsBroken() + 1);
 
-        b.setType(Material.AIR);
-        projectile.getWorld().playSound(b.getLocation(), Sound.BLOCK_GLASS_BREAK, 3.0F, 0.5F);
+        block.setType(Material.AIR);
+        projectile.getWorld().playSound(block.getLocation(), Sound.BLOCK_GLASS_BREAK, 3.0F, 0.5F);
 
-        e.getNearbyEntities(1,1,1).forEach(entity -> {
-            if(entity instanceof Player) {
+        entity.getNearbyEntities(1,1,1).forEach(nearbyEntity -> {
+            if(nearbyEntity instanceof Player) {
                 Player player = (Player) entity;
                 if(player.getHealth() >= 1) {
                     player.setHealth(player.getHealth() - 1);
                 }
                 else {
-                    p.setHealth(0);
+                    player.setHealth(0);
                 }
             }
         });
 
         Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> {
-            b.setType(m);
+            block.setType(material);
 
-            getBlocks(b, 1).forEach(block -> {
-                if(block.getType() == Material.QUARTZ_BLOCK) {
-                    block.setType(Material.AIR);
-                    block.setType(Material.QUARTZ_BLOCK);
+            getBlocks(block, 1).forEach(surroundingBlock -> {
+                if(surroundingBlock.getType() == Material.QUARTZ_BLOCK) {
+                    surroundingBlock.setType(Material.AIR);
+                    surroundingBlock.setType(Material.QUARTZ_BLOCK);
                 }
             });
         }, 300);

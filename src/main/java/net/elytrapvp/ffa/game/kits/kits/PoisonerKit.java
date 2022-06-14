@@ -50,8 +50,7 @@ public class PoisonerKit extends Kit {
                     .addLore("&7Left Click to Purchase")
                     .addLore("&7Right Click to Preview");
         }
-        ItemStack item = builder.build();
-        item.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
-        return item;
+        builder.addItemFlag(ItemFlag.HIDE_POTION_EFFECTS);
+        return builder.build();
     }
 }

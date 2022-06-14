@@ -1,24 +1,30 @@
 package net.elytrapvp.ffa.commands;
 
 import net.elytrapvp.ffa.inventories.KitsGUI;
-import net.elytrapvp.ffa.utilities.chat.ChatUtils;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class KitsCMD implements CommandExecutor {
+/**
+ * This class runs the /kits command.
+ * This command opens up the kit selector gui,
+ */
+public class KitsCMD extends AbstractCommand {
+
+    /**
+     * Creates the command.
+     */
+    public KitsCMD() {
+        super("kits", "", false);
+    }
+
+    /**
+     * Runs when the command is executed.
+     * @param sender The Command Sender.
+     * @param args Arguments of the command.
+     */
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        // Exit if sender is not a player.
-        if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&c&lError &8» &cOnly players can use that command.");
-            return true;
-        }
-
-        Player p = (Player) sender;
-        new KitsGUI(p).open(p);
-
-        return true;
+    public void execute(CommandSender sender, String[] args) {
+        Player player = (Player) sender;
+        new KitsGUI(player).open(player);
     }
 }

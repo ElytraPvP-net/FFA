@@ -3,10 +3,11 @@ package net.elytrapvp.ffa.events;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.jetbrains.annotations.NotNull;
 
 public class PlayerDrownEvent extends Event {
     private static final HandlerList HANDLERS = new HandlerList();
-    private Player player;
+    private final Player player;
 
     public PlayerDrownEvent(Player player) {
         this.player = player;
@@ -16,7 +17,7 @@ public class PlayerDrownEvent extends Event {
         return player;
     }
 
-    public HandlerList getHandlers() {
+    public @NotNull HandlerList getHandlers() {
         return HANDLERS;
     }
 

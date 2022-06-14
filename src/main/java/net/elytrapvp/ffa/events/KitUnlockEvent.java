@@ -4,11 +4,12 @@ import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.game.kits.Kit;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
+import org.jetbrains.annotations.NotNull;
 
 public class KitUnlockEvent extends Event {
     private static final HandlerList HANDLERS = new HandlerList();
-    private CustomPlayer customPlayer;
-    private Kit kit;
+    private final CustomPlayer customPlayer;
+    private final Kit kit;
 
     public KitUnlockEvent(CustomPlayer customPlayer, Kit kit) {
         this.customPlayer = customPlayer;
@@ -23,7 +24,7 @@ public class KitUnlockEvent extends Event {
         return kit;
     }
 
-    public HandlerList getHandlers() {
+    public @NotNull HandlerList getHandlers() {
         return HANDLERS;
     }
 

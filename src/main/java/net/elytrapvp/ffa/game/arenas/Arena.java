@@ -15,10 +15,10 @@ import java.util.List;
  * Represents an area in which the game is played.
  */
 public class Arena {
-    private String name;
+    private final String name;
     private final List<Location> bounds = new ArrayList<>();
-    private Location spawn;
-    private List<Material> deathBlocks = new ArrayList<>();
+    private final Location spawn;
+    private final List<Material> deathBlocks = new ArrayList<>();
 
     /**
      * Loads an arena from arenas.yml
@@ -40,7 +40,7 @@ public class Arena {
             double y = settings.getDouble(location + "Y");
             double z = settings.getDouble(location + "Z");
             float yaw = (float) settings.getDouble(location + "Yaw");
-            float pitch = (float) settings.getDouble(location + "Pitch");;
+            float pitch = (float) settings.getDouble(location + "Pitch");
 
             spawn = new Location(world, x, y, z, yaw, pitch);
         }
@@ -54,7 +54,7 @@ public class Arena {
             double y = settings.getDouble(location + "Y");
             double z = settings.getDouble(location + "Z");
             float yaw = (float) settings.getDouble(location + "Yaw");
-            float pitch = (float) settings.getDouble(location + "Pitch");;
+            float pitch = (float) settings.getDouble(location + "Pitch");
 
             bounds.add(new Location(world, x, y, z, yaw, pitch));
         }
@@ -67,7 +67,7 @@ public class Arena {
             double y = settings.getDouble(location + "Y");
             double z = settings.getDouble(location + "Z");
             float yaw = (float) settings.getDouble(location + "Yaw");
-            float pitch = (float) settings.getDouble(location + "Pitch");;
+            float pitch = (float) settings.getDouble(location + "Pitch");
 
             bounds.add(new Location(world, x, y, z, yaw, pitch));
         }
@@ -113,7 +113,7 @@ public class Arena {
     /**
      * Check if a player is in the arena.
      * @param player Player to check.
-     * @return Whether or not they are in the arena.
+     * @return Whether they are in the arena.
      */
     public boolean hasPlayer(Player player) {
         int x1 = bounds.get(0).getBlockX();

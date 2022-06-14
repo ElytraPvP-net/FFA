@@ -9,15 +9,28 @@ import org.bukkit.entity.Player;
 
 import java.util.Arrays;
 
+/**
+ * This class runs the /arena command.
+ * This command manages the multi-arena system.
+ */
 public class ArenaCMD extends AbstractCommand {
     private final FFA plugin;
 
+    /**
+     * Creates the command.
+     * @param plugin Instance of the plugin.
+     */
     public ArenaCMD(FFA plugin) {
         super("arena", "", false);
 
         this.plugin = plugin;
     }
 
+    /**
+     * Runs when the command is executed.
+     * @param sender The Command Sender.
+     * @param args Arguments of the command.
+     */
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length == 0) {

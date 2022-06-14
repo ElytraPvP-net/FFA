@@ -5,6 +5,7 @@ import net.elytrapvp.ffa.managers.SettingsManager;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.game.cosmetics.Tag;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * This class will be registered through the register-method in the
@@ -57,7 +58,7 @@ class Placeholders extends PlaceholderExpansion {
      * @return The name of the author as a String.
      */
     @Override
-    public String getAuthor(){
+    public @NotNull String getAuthor(){
         return plugin.getDescription().getAuthors().toString();
     }
 
@@ -71,7 +72,7 @@ class Placeholders extends PlaceholderExpansion {
      * @return The identifier in {@code %<identifier>_<value>%} as String.
      */
     @Override
-    public String getIdentifier(){
+    public @NotNull String getIdentifier(){
         return "ep";
     }
 
@@ -84,83 +85,69 @@ class Placeholders extends PlaceholderExpansion {
      * @return The version as a String.
      */
     @Override
-    public String getVersion(){
+    public @NotNull String getVersion(){
         return plugin.getDescription().getVersion();
     }
 
 
     @Override
-    public String onPlaceholderRequest(Player p, String identifier)
-    {
-        if(p == null) {
+    public String onPlaceholderRequest(Player player, @NotNull String identifier) {
+        if(player == null) {
             return "";
         }
 
-        CustomPlayer player = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
+        CustomPlayer customPlayer = CustomPlayer.getCustomPlayers().get(player.getUniqueId());
 
         // Coins
         if(identifier.equals("coins")) {
-            return String.valueOf(player.getCoins());
+            return String.valueOf(customPlayer.getCoins());
         }
 
         // Kills
         if(identifier.equals("kills")) {
-            return String.valueOf(player.getKills());
+            return String.valueOf(customPlayer.getKills());
         }
 
         // Deaths
         if(identifier.equals("deaths")) {
-            return String.valueOf(player.getDeaths());
+            return String.valueOf(customPlayer.getDeaths());
         }
 
         // Killstreak
         if(identifier.equals("killstreak")) {
-            return String.valueOf(player.getKillStreak());
+            return String.valueOf(customPlayer.getKillStreak());
         }
 
         // Kit
         if(identifier.equals("kit")) {
 
-            switch(player.getKit()) {
-                case -1:
-                    return "Spectator";
-                case 1:
-                    return "Sniper";
-                case 2:
-                    return "Knight";
-                case 3:
-                    return "Pyro";
-                case 4:
-                    return "Tank";
-                case 5:
-                    return "Chemist";
-                case 6:
-                    return "Stickman";
-                case 7:
-                    return "Bomber";
-                case 8:
-                    return "Healer";
-                case 9:
-                    return "Teleporter";
-                case 10:
-                    return "Spectral";
-                case 11:
-                    return "Puncher";
-                default:
-                    return "None";
-            }
+            return switch (customPlayer.getKit()) {
+                case -1 -> "Spectator";
+                case 1 -> "Sniper";
+                case 2 -> "Knight";
+                case 3 -> "Pyro";
+                case 4 -> "Tank";
+                case 5 -> "Chemist";
+                case 6 -> "Stickman";
+                case 7 -> "Bomber";
+                case 8 -> "Healer";
+                case 9 -> "Teleporter";
+                case 10 -> "Spectral";
+                case 11 -> "Puncher";
+                default -> "None";
+            };
 
         }
 
         // Get tag
         if(identifier.equals("tag")) {
 
-            if(player.getTag() == 0) {
+            if(customPlayer.getTag() == 0) {
                 return "";
             }
             else {
                 for(Tag t : Tag.getTags().values()) {
-                    if(t.getNumber() == player.getTag()) {
+                    if(t.getNumber() == customPlayer.getTag()) {
                         return t.getTag() + " ";
                     }
                 }
@@ -170,12 +157,12 @@ class Placeholders extends PlaceholderExpansion {
         // Get raw tag
         if(identifier.equals("tag_raw")) {
 
-            if(player.getTag() == 0) {
+            if(customPlayer.getTag() == 0) {
                 return "";
             }
             else {
                 for(Tag t : Tag.getTags().values()) {
-                    if(t.getNumber() == player.getTag()) {
+                    if(t.getNumber() == customPlayer.getTag()) {
                         return t.getRawTag() + " ";
                     }
                 }

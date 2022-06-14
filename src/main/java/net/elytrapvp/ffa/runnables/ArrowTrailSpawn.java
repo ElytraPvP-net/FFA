@@ -7,11 +7,11 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class ArrowTrailSpawn extends BukkitRunnable {
     @Override
     public void run() {
-        for (Arrow a : ArrowTrail.getArrows().keySet()) {
-            ArrowTrail.getArrows().get(a).spawnParticle(a);
+        for (Arrow arrow : ArrowTrail.getArrows().keySet()) {
+            ArrowTrail.getArrows().get(arrow).spawnParticle(arrow);
 
-            if(a == null || a.isDead())
-                ArrowTrail.getArrows().remove(a);
+            if(arrow == null || arrow.isDead())
+                ArrowTrail.getArrows().remove(arrow);
         }
     }
 }

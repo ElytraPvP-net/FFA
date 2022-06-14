@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FireworkBuilder extends ItemBuilder {
     private int power;
-    private List<FireworkEffect> effects = new ArrayList<>();
+    private final List<FireworkEffect> effects = new ArrayList<>();
 
     public FireworkBuilder() {
         super(Material.FIREWORK_ROCKET);

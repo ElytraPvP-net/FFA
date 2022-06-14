@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Achievement {
-    public static Map<Integer, Achievement> achievements = new HashMap<>();
+    public static final Map<Integer, Achievement> achievements = new HashMap<>();
 
-    private String name;
-    private String description;
-    private int coinReward;
-    private int expReward;
-    private int id;
+    private final String name;
+    private final String description;
+    private final int coinReward;
+    private final int expReward;
+    private final int id;
 
     public Achievement(String name, String description, int id, int coinReward, int expReward) {
         this.name = name;

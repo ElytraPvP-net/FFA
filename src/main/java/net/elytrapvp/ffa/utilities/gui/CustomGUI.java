@@ -94,8 +94,6 @@ public abstract class CustomGUI {
         openInventories.put(player.getUniqueId(), getUuid());
     }
 
-    public void onClose(Player p) {}
-
     public interface ClickAction {
         void click(Player player, ClickType type);
     }

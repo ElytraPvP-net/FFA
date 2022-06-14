@@ -78,6 +78,11 @@ public class ItemBuilder {
         return this;
     }
 
+    public ItemBuilder addItemFlag(ItemFlag flag) {
+        meta.addItemFlags(flag);
+        return this;
+    }
+
     /**
      * Add lore to the item.
      * @param str String
@@ -175,7 +180,7 @@ public class ItemBuilder {
 
     /**
      * Set the lore of an item.
-     * @param lore
+     * @param lore Lore the item should have.
      * @return ItemBuilder
      */
     public ItemBuilder setLore(String... lore) {

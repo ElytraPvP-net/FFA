@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PotionBuilder extends ItemBuilder {
-    private List<PotionEffect> effects = new ArrayList<>();
+    private final List<PotionEffect> effects = new ArrayList<>();
 
     public PotionBuilder(Material material, int amount) {
         super(material, amount);

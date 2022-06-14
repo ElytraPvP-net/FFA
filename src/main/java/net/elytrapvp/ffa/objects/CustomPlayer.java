@@ -4,7 +4,6 @@ import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.MySQL;
 import net.elytrapvp.ffa.enums.Status;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -289,7 +288,7 @@ public class CustomPlayer {
 
     /**
      * Get the player's current kill streak.
-     * @return
+     * @return The player's current kill streak.
      */
     public int getKillStreak() {
         return killStreak;

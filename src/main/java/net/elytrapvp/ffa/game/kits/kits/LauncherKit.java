@@ -45,7 +45,6 @@ public class LauncherKit extends Kit {
                     .addLore("&7Left Click to Purchase")
                     .addLore("&7Right Click to Preview");
         }
-        ItemStack item = builder.build();
-        return item;
+        return builder.build();
     }
 }

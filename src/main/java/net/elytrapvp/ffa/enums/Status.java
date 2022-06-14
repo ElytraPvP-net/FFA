@@ -9,7 +9,7 @@ public enum Status {
     SPECTATOR,
     OTHER;
 
-    private static HashMap<UUID, Status> players = new HashMap<UUID, Status>();
+    private static HashMap<UUID, Status> players = new HashMap<>();
 
     public static HashMap<UUID, Status> getPlayers() {
         return players;

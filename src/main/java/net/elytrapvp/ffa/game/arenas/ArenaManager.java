@@ -8,13 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArenaManager {
-    private final FFA plugin;
     private Arena selectedArena;
     private final List<Arena> arenas = new ArrayList<>();
 
     public ArenaManager(FFA plugin) {
-        this.plugin = plugin;
-
         FileConfiguration arenasConfig = plugin.getSettingsManager().getArenas();
         ConfigurationSection section = arenasConfig.getConfigurationSection("Arenas");
 
@@ -54,5 +51,13 @@ public class ArenaManager {
      */
     public Arena getSelectedArena() {
         return selectedArena;
+    }
+
+    /**
+     * Changes the currently selected arena.
+     * @param selectedArena new selected arena.
+     */
+    public void setSelectedArena(Arena selectedArena) {
+        this.selectedArena = selectedArena;
     }
 }

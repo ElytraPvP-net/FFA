@@ -11,12 +11,12 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashMap;
 
 public class Tag {
-    private String tag;
-    private int number;
-    private int price;
-    private TagType type;
+    private final String tag;
+    private final int number;
+    private final int price;
+    private final TagType type;
 
-    private static HashMap<Integer, Tag> tags = new HashMap<>();
+    private static final HashMap<Integer, Tag> tags = new HashMap<>();
 
     public Tag(String tag, int number, int price, TagType type) {
         this.tag = tag;

@@ -17,20 +17,20 @@ import java.util.List;
  * Represents the menu where a kit is previewed.
  */
 public class PreviewKitGUI extends CustomGUI {
-    private Kit k;
+    private Kit kit;
 
     /**
      * Creates a GUI to preview kits.
-     * @param k Kit to preview.
+     * @param kit Kit to preview.
      */
-    public PreviewKitGUI(Kit k) {
+    public PreviewKitGUI(Kit kit) {
         super(54, "Preview");
 
-        this.k = k;
+        this.kit = kit;
         fillers();
 
-        for(int i : k.getItems().keySet()) {
-            setItem(slotToGUI(i), k.getItems().get(i));
+        for(int i : kit.getItems().keySet()) {
+            setItem(slotToGUI(i), kit.getItems().get(i));
         }
 
         ItemStack back = new SkullBuilder("edf5c2f893bd3f89ca40703ded3e42dd0fbdba6f6768c8789afdff1fa78bf6")
@@ -38,10 +38,10 @@ public class PreviewKitGUI extends CustomGUI {
                 .build();
 
         setItem(0, back, (player, action) -> new KitsGUI(player).open(player));
-        setItem(slotToGUI(38), k.getElytra());
-        setItem(25, k.getArrow());
+        setItem(slotToGUI(38), kit.getElytra());
+        setItem(25, kit.getArrow());
         setItem(8, getPotionEffects());
-        setItem(7, new ItemBuilder(Material.APPLE).setDisplayName("&cHealth: " + k.getHealth()).build());
+        setItem(7, new ItemBuilder(Material.APPLE).setDisplayName("&cHealth: " + kit.getHealth()).build());
     }
 
     /**
@@ -87,7 +87,7 @@ public class PreviewKitGUI extends CustomGUI {
                 .addFlag(ItemFlag.HIDE_ATTRIBUTES)
                 .addFlag(ItemFlag.HIDE_POTION_EFFECTS);
 
-        for(PotionEffect effect : k.getEffects()) {
+        for(PotionEffect effect : kit.getEffects()) {
             String name = WordUtils.capitalize(effect.getType().getName().replace("_", " ").toLowerCase());
             builder.addLore("&7" + name);
         }

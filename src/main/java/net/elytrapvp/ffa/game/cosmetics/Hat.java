@@ -12,13 +12,13 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashMap;
 
 public class Hat {
-    private String name;
-    private int price;
-    private String skin;
-    private int id;
-    private HatType type;
+    private final String name;
+    private final int price;
+    private final String skin;
+    private final int id;
+    private final HatType type;
 
-    private static HashMap<Integer, Hat> hats = new HashMap<>();
+    private static final HashMap<Integer, Hat> hats = new HashMap<>();
 
     public Hat(String name, int price, int id, String skin, HatType type) {
         this.name = name;

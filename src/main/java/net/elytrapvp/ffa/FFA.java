@@ -119,13 +119,6 @@ public class FFA extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("admin").setExecutor(new AdminCMD());
-        getCommand("cosmetics").setExecutor(new CosmeticsCMD());
-        getCommand("kits").setExecutor(new KitsCMD());
-        getCommand("leaderboards").setExecutor(new LeaderboardCMD(this));
-        getCommand("spawn").setExecutor(new SpawnCMD(this));
-        getCommand("stats").setExecutor(new StatsCMD(this));
-        getCommand("bounty").setExecutor(new BountyCMD());
-        getCommand("eventshop").setExecutor(new EventShopCMD());
     }
 
     /**
@@ -181,23 +174,22 @@ public class FFA extends JavaPlugin {
     }
 
     private void registerListeners() {
-        getServer().getPluginManager().registerEvents(new EntityDamage(), this);
-        getServer().getPluginManager().registerEvents(new EntityDamageByEntity(), this);
-        getServer().getPluginManager().registerEvents(new EntityPickupItem(), this);
-        getServer().getPluginManager().registerEvents(new EntityShootBow(), this);
+        getServer().getPluginManager().registerEvents(new EntityDamageListener(), this);
+        getServer().getPluginManager().registerEvents(new EntityDamageByEntityListener(), this);
+        getServer().getPluginManager().registerEvents(new EntityPickupItemListener(this), this);
+        getServer().getPluginManager().registerEvents(new EntityShootBowListener(), this);
         getServer().getPluginManager().registerEvents(new FoodLevelChangeListener(), this);
-        getServer().getPluginManager().registerEvents(new InventoryClick(), this);
-        getServer().getPluginManager().registerEvents(new ParkourComplete(), this);
-        getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
-        getServer().getPluginManager().registerEvents(new PlayerDropItem(), this);
+        getServer().getPluginManager().registerEvents(new InventoryClickListener(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerDeathListener(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerDropItemListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerDrown(), this);
         getServer().getPluginManager().registerEvents(new PlayerEscape(), this);
-        getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
-        getServer().getPluginManager().registerEvents(new PlayerJoin(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerInteractListener(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerLand(), this);
-        getServer().getPluginManager().registerEvents(new PlayerMove(this), this);
-        getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
-        getServer().getPluginManager().registerEvents(new PlayerRespawn(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerMoveListener(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerQuitListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerRespawnListener(this), this);
         getServer().getPluginManager().registerEvents(new ProjectileHitListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerEscape(), this);
 

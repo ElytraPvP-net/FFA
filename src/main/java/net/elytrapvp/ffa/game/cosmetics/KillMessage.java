@@ -10,11 +10,11 @@ import org.bukkit.inventory.ItemStack;
 import java.util.HashMap;
 
 public class KillMessage {
-    private int id;
-    private String message;
-    private int price;
+    private final int id;
+    private final String message;
+    private final int price;
 
-    private static HashMap<Integer, KillMessage> killMessages = new HashMap<>();
+    private static final HashMap<Integer, KillMessage> killMessages = new HashMap<>();
 
     public KillMessage(String message, int id, int price) {
         this.message = message;

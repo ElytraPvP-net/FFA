@@ -5,29 +5,31 @@ import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class StatsCMD implements CommandExecutor {
+public class StatsCMD extends AbstractCommand {
     private final FFA plugin;
 
+    /**
+     * Creates the command.
+     * @param plugin Instance of the plugin.
+     */
     public StatsCMD(FFA plugin) {
+        super("stats", "", false);
         this.plugin = plugin;
     }
 
+    /**
+     * Runs when the command is executed.
+     * @param sender The Command Sender.
+     * @param args Arguments of the command.
+     */
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        // Exit if sender is not a player.
-        if(!(sender instanceof Player)) {
-            ChatUtils.chat(sender, "&c&lError &8» &cOnly players can use that command.");
-            return true;
-        }
-
+    public void execute(CommandSender sender, String[] args) {
         Player player = (Player) sender;
         String username = player.getName();
         CustomPlayer customPlayer;
@@ -40,7 +42,7 @@ public class StatsCMD implements CommandExecutor {
 
             if(!CustomPlayer.exists(target.getUniqueId())) {
                 ChatUtils.chat(player, "&c&lError &8» &cThat player has never joined.");
-                return true;
+                return;
             }
 
             if(Bukkit.getPlayer(args[0]) != null) {
@@ -70,8 +72,6 @@ public class StatsCMD implements CommandExecutor {
             ChatUtils.chat(player, "  &aCoins &8» &7" + customPlayer.getCoins());
             ChatUtils.chat(player, "&8&m+-----------------------***-----------------------+");
         }, 5);
-
-        return true;
     }
 
     private static double round(double value, int places) {

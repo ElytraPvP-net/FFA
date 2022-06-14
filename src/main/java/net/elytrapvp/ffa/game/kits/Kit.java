@@ -11,15 +11,15 @@ import org.bukkit.potion.PotionEffect;
 import java.util.*;
 
 public abstract class Kit {
-    private static List<Kit> kits = new ArrayList<>();
-    private String name;
+    private static final List<Kit> kits = new ArrayList<>();
+    private final String name;
     private int price;
     private int health;
-    private int id;
+    private final int id;
     private ItemStack arrow;
     private ItemStack elytra;
-    private Map<Integer, ItemStack> items = new HashMap<>();
-    private Collection<PotionEffect> effects = new HashSet<>();
+    private final Map<Integer, ItemStack> items = new HashMap<>();
+    private final Collection<PotionEffect> effects = new HashSet<>();
 
     /**
      * Create a Kit.
