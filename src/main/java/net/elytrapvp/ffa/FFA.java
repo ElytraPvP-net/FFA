@@ -68,6 +68,7 @@ public class FFA extends JavaPlugin {
         plugin = null;
     }
 
+    @Deprecated
     public static FFA getPlugin() {
         return plugin;
     }
@@ -229,5 +230,9 @@ public class FFA extends JavaPlugin {
 
     public LeaderboardManager getLeaderboardManager() {
         return leaderboardManager;
+    }
+
+    public SettingsManager getSettingsManager() {
+        return settings;
     }
 }

@@ -24,6 +24,7 @@ public class SettingsManager {
      * Get the instance of SettingsManager.
      * @return instance.
      */
+    @Deprecated
     public static SettingsManager getInstance() {
         return instance;
     }
