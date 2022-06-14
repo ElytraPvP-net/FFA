@@ -22,6 +22,11 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class PlayerJoin implements Listener {
     SettingsManager settings = SettingsManager.getInstance();
+    private final FFA plugin;
+
+    public PlayerJoin(FFA plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
@@ -39,7 +44,8 @@ public class PlayerJoin implements Listener {
         }
 
         if(settings.getConfig().getBoolean("Spawn.Set")) {
-            p.teleport(LocationUtils.getSpawn());
+            //p.teleport(LocationUtils.getSpawn());
+            p.teleport(plugin.getArenaManager().getSelectedArena().getSpawn());
         }
 
         p.setMaxHealth(20);

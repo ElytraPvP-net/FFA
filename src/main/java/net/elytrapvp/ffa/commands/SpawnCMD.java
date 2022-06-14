@@ -17,6 +17,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitScheduler;
 
 public class SpawnCMD implements CommandExecutor {
+    private final FFA plugin;
+
+    public SpawnCMD(FFA plugin) {
+        this.plugin = plugin;
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         // Exit if not a player
@@ -30,7 +36,8 @@ public class SpawnCMD implements CommandExecutor {
 
         // Run if player is not in arena.
         if(cp.getStatus() != Status.ARENA) {
-            p.teleport(LocationUtils.getSpawn());
+            //p.teleport(LocationUtils.getSpawn());
+            p.teleport(plugin.getArenaManager().getSelectedArena().getSpawn());
             if(cp.getStatus() != Status.OTHER) {
                 if(cp.getHat() != 0) {
                     p.getInventory().setHelmet(Hat.getHats().get(cp.getHat()).getHat());
@@ -45,7 +52,8 @@ public class SpawnCMD implements CommandExecutor {
             cp.setStatus(Status.OTHER);
 
             p.closeInventory();
-            p.teleport(LocationUtils.getSpawn());
+            //p.teleport(LocationUtils.getSpawn());
+            p.teleport(plugin.getArenaManager().getSelectedArena().getSpawn());
 
             p.setMaxHealth(20);
             p.setHealth(20);

@@ -20,7 +20,7 @@ public class PlayerDeath implements Listener {
         Player p = e.getEntity();
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
 
-        p.setBedSpawnLocation(LocationUtils.getSpawn());
+        //p.setBedSpawnLocation(LocationUtils.getSpawn());
 
         cp.addDeaths(1);
         cp.setKillStreak(0);

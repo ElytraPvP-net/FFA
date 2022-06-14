@@ -4,6 +4,7 @@ import net.elytrapvp.ffa.commands.*;
 import net.elytrapvp.ffa.enums.Event;
 import net.elytrapvp.ffa.enums.HatType;
 import net.elytrapvp.ffa.enums.TagType;
+import net.elytrapvp.ffa.game.arenas.ArenaManager;
 import net.elytrapvp.ffa.game.cosmetics.ArrowTrail;
 import net.elytrapvp.ffa.game.cosmetics.Hat;
 import net.elytrapvp.ffa.game.cosmetics.KillMessage;
@@ -26,6 +27,7 @@ public class FFA extends JavaPlugin {
     private static final SettingsManager settings = SettingsManager.getInstance();
     private static FFA plugin;
     private LeaderboardManager leaderboardManager;
+    private ArenaManager arenaManager;
 
     @Override
     public void onEnable() {
@@ -33,6 +35,7 @@ public class FFA extends JavaPlugin {
 
         // Load configuration files.
         settings.setup(this);
+        arenaManager = new ArenaManager(this);
 
         // If PlaceholderAPI is installed, enables placeholders
         if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
@@ -45,6 +48,7 @@ public class FFA extends JavaPlugin {
 
         // Load plugin essentials.
         registerCommands();
+        AbstractCommand.registerCommands(this);
         registerKits();
         registerListeners();
         registerRunnables();
@@ -118,7 +122,7 @@ public class FFA extends JavaPlugin {
         getCommand("cosmetics").setExecutor(new CosmeticsCMD());
         getCommand("kits").setExecutor(new KitsCMD());
         getCommand("leaderboards").setExecutor(new LeaderboardCMD(this));
-        getCommand("spawn").setExecutor(new SpawnCMD());
+        getCommand("spawn").setExecutor(new SpawnCMD(this));
         getCommand("stats").setExecutor(new StatsCMD(this));
         getCommand("bounty").setExecutor(new BountyCMD());
         getCommand("eventshop").setExecutor(new EventShopCMD());
@@ -189,11 +193,11 @@ public class FFA extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerDrown(), this);
         getServer().getPluginManager().registerEvents(new PlayerEscape(), this);
         getServer().getPluginManager().registerEvents(new PlayerInteract(), this);
-        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoin(this), this);
         getServer().getPluginManager().registerEvents(new PlayerLand(), this);
-        getServer().getPluginManager().registerEvents(new PlayerMove(), this);
+        getServer().getPluginManager().registerEvents(new PlayerMove(this), this);
         getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
-        getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
+        getServer().getPluginManager().registerEvents(new PlayerRespawn(this), this);
         getServer().getPluginManager().registerEvents(new PlayerTeleport(), this);
         getServer().getPluginManager().registerEvents(new ProjectileHit(), this);
         getServer().getPluginManager().registerEvents(new PlayerEscape(), this);
@@ -234,5 +238,9 @@ public class FFA extends JavaPlugin {
 
     public SettingsManager getSettingsManager() {
         return settings;
+    }
+
+    public ArenaManager getArenaManager() {
+        return arenaManager;
     }
 }

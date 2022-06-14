@@ -22,12 +22,16 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 public class PlayerMove implements Listener {
-    SettingsManager settings = SettingsManager.getInstance();
+    private final FFA plugin;
+
+    public PlayerMove(FFA plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onMove(PlayerMoveEvent e) {
         // Exit if not enabled.
-        if(!settings.getConfig().getBoolean("Enabled")) {
+        if(!plugin.getSettingsManager().getConfig().getBoolean("Enabled")) {
             return;
         }
 
@@ -54,8 +58,15 @@ public class PlayerMove implements Listener {
             }
         }
 
+        /*
         // Check if player tries to escape.
         if(!LocationUtils.inArena(p) && cp.getStatus() == Status.ARENA) {
+            Bukkit.getPluginManager().callEvent(new PlayerEscapeEvent(p));
+        }
+         */
+
+        // Check if the player tries to escape.
+        if(!plugin.getArenaManager().getSelectedArena().hasPlayer(p) && cp.getStatus() == Status.ARENA) {
             Bukkit.getPluginManager().callEvent(new PlayerEscapeEvent(p));
         }
 
@@ -80,21 +91,58 @@ public class PlayerMove implements Listener {
         }
 
         // Calls PlayerLandEvent is the player touches the ground.
-        if(settings.getConfig().getStringList("DeathBlocks").contains(block.getType().toString())) {
+        /*
+        if(plugin.getSettingsManager().getConfig().getStringList("DeathBlocks").contains(block.getType().toString())) {
             Bukkit.getPluginManager().callEvent(new PlayerLandEvent(p));
         }
 
+         */
+        if(plugin.getArenaManager().getSelectedArena().getDeathBlocks().contains(block.getType())) {
+            Bukkit.getPluginManager().callEvent(new PlayerLandEvent(p));
+        }
     }
 
     private void spectatorMove(Player p) {
+        /*
         if(!LocationUtils.inArena(p)) {
+            Spectator.remove(p);
+        }
+
+         */
+        if(!plugin.getArenaManager().getSelectedArena().hasPlayer(p)) {
             Spectator.remove(p);
         }
     }
 
     private void lobbyMove(Player p, CustomPlayer cp) {
         // Exit if kit is not selected.
+
+        /*
         if(LocationUtils.inArena(p)) {
+            switch (cp.getKit()) {
+                case -1 -> {
+                    Spectator.add(p);
+                }
+                case 0 -> {
+                    p.teleport(LocationUtils.getSpawn());
+                    ChatUtils.chat(p, "&c&lError &8» &cYou have not selected a kit yet.");
+                }
+                default -> {
+                    cp.setStatus(Status.ARENA);
+                    p.getInventory().clear();
+                    Kit k = Kit.getKits().get(cp.getKit() - 1);
+                    k.giveKit(p);
+                    cp.setDrops(cp.getDrops() + 1);
+
+                    Bukkit.getScheduler().runTaskLater(FFA.getPlugin(), () -> {
+                        p.setGliding(true);
+                    }, 20);
+                }
+            }
+        }
+         */
+
+        if(plugin.getArenaManager().getSelectedArena().hasPlayer(p)) {
             switch (cp.getKit()) {
                 case -1 -> {
                     Spectator.add(p);

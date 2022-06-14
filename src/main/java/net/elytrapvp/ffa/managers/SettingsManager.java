@@ -20,6 +20,9 @@ public class SettingsManager {
     private FileConfiguration tags;
     private File tagsFile;
 
+    private FileConfiguration arenas;
+    private File arenasFile;
+
     /**
      * Get the instance of SettingsManager.
      * @return instance.
@@ -62,6 +65,13 @@ public class SettingsManager {
 
         if(!killMessagesFile.exists())
             pl.saveResource("killmessages.yml", false);
+
+        arenasFile = new File(pl.getDataFolder(), "arenas.yml");
+        arenas = YamlConfiguration.loadConfiguration(arenasFile);
+
+        if(!arenasFile.exists()) {
+            pl.saveResource("arenas.yml", false);
+        }
     }
 
     /**
@@ -118,5 +128,9 @@ public class SettingsManager {
     public void reloadConfig() {
         saveConfig();
         config = YamlConfiguration.loadConfiguration(configFile);
+    }
+
+    public FileConfiguration getArenas() {
+        return arenas;
     }
 }

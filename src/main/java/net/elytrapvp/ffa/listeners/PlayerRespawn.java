@@ -1,5 +1,6 @@
 package net.elytrapvp.ffa.listeners;
 
+import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.DeathType;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.objects.CustomPlayer;
@@ -15,6 +16,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
 public class PlayerRespawn implements Listener {
+    private final FFA plugin;
+
+    public PlayerRespawn(FFA plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onRespawn(PlayerRespawnEvent e) {
@@ -24,7 +30,8 @@ public class PlayerRespawn implements Listener {
         cp.setStatus(Status.LOBBY);
         DeathType.list.remove(p.getUniqueId());
 
-        e.setRespawnLocation(LocationUtils.getSpawn());
+        //e.setRespawnLocation(LocationUtils.getSpawn());
+        e.setRespawnLocation(plugin.getArenaManager().getSelectedArena().getSpawn());
 
         p.setMaxHealth(20);
         p.setHealth(20);

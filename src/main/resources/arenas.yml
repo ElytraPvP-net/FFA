@@ -1,0 +1,27 @@
+Arenas:
+  1:
+    Name: "Farm"
+    Spawn:
+      World: world
+      X: -433.5
+      Y: 110.0
+      Z: 16.5
+      Yaw: -180
+      Pitch: 0
+    Bounds:
+      Pos1:
+        World: world
+        X: -358
+        Y: 3
+        Z: 75
+      Pos2:
+        World: world
+        X: -510
+        Y: 108
+        Z: -77
+    DeathBlocks:
+      - OAK_LEAVES
+      - SPRUCE_LEAVES
+      - GRASS_BLOCK
+      - FARMLAND
+      - DARK_OAK_SLAB
