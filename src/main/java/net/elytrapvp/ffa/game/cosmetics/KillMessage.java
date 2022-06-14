@@ -1,5 +1,6 @@
-package net.elytrapvp.ffa.objects;
+package net.elytrapvp.ffa.game.cosmetics;
 
+import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;

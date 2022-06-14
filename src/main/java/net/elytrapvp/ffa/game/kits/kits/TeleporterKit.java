@@ -1,35 +1,38 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
-public class TankKit extends Kit {
-    public TankKit() {
-        super("Tank", 4);
+public class TeleporterKit extends Kit {
+    public TeleporterKit() {
+        super("Teleporter", 9);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aTank Bow")
+                .setDisplayName("&aTeleporter Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 1)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 3)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
         addItem(0, bow);
 
-        addEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 99999, 1));
+        ItemStack enderpearls = new ItemBuilder(Material.ENDER_PEARL, 64)
+                .setDisplayName("&aEnder pearl")
+                .build();
+        addItem(2, enderpearls);
+
+        setPrice(400);
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.IRON_CHESTPLATE)
-                .setDisplayName("&aTank")
-                .addLore("&7Increased health to help")
-                .addLore("&7take the blows.")
+        ItemBuilder builder = new ItemBuilder(Material.ENDER_PEARL)
+                .setDisplayName("&aTeleporter")
+                .addLore("&7Confuse your enemies")
+                .addLore("&7with ender pearls.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
@@ -39,7 +42,7 @@ public class TankKit extends Kit {
         }
         else {
             builder.setMaterial(Material.GRAY_DYE)
-                    .addLore("&6Price: 0 Coins")
+                    .addLore("&6Price: 400 Coins")
                     .addLore("&7Left Click to Purchase")
                     .addLore("&7Right Click to Preview");
         }

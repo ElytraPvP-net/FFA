@@ -1,6 +1,6 @@
 package net.elytrapvp.ffa.runnables;
 
-import net.elytrapvp.ffa.objects.ArrowTrail;
+import net.elytrapvp.ffa.game.cosmetics.ArrowTrail;
 import org.bukkit.entity.Arrow;
 import org.bukkit.scheduler.BukkitRunnable;
 

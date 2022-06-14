@@ -1,6 +1,6 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.ffa.objects.ArrowTrail;
+import net.elytrapvp.ffa.game.cosmetics.ArrowTrail;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.elytrapvp.ffa.utilities.gui.CustomGUI;

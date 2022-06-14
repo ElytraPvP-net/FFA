@@ -1,7 +1,7 @@
 package net.elytrapvp.ffa.listeners;
 
 import net.elytrapvp.ffa.enums.Status;
-import net.elytrapvp.ffa.objects.ArrowTrail;
+import net.elytrapvp.ffa.game.cosmetics.ArrowTrail;
 import net.elytrapvp.ffa.objects.CustomPlayer;
 import org.bukkit.Material;
 import org.bukkit.entity.Arrow;

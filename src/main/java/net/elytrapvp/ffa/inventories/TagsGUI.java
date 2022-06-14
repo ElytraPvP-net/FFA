@@ -2,7 +2,7 @@ package net.elytrapvp.ffa.inventories;
 
 import net.elytrapvp.ffa.enums.TagType;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Tag;
+import net.elytrapvp.ffa.game.cosmetics.Tag;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.elytrapvp.ffa.utilities.gui.CustomGUI;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;

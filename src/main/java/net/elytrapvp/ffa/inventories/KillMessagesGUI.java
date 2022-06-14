@@ -1,7 +1,7 @@
 package net.elytrapvp.ffa.inventories;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.KillMessage;
+import net.elytrapvp.ffa.game.cosmetics.KillMessage;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.elytrapvp.ffa.utilities.gui.CustomGUI;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;

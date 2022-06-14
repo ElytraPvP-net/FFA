@@ -1,4 +1,4 @@
-package net.elytrapvp.ffa.managers;
+package net.elytrapvp.ffa.game;
 
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.MySQL;

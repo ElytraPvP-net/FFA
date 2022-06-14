@@ -1,9 +1,8 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
-import net.elytrapvp.ffa.utilities.item.PotionBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -11,31 +10,29 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class ChemistKit extends Kit {
-    public ChemistKit() {
-        super("Chemist", 5);
-        setPrice(400);
+public class HealerKit extends Kit {
+    public HealerKit() {
+        super("Healer", 8);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aChemist Bow")
+                .setDisplayName("&aHealer Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 3)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 2)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
         addItem(0, bow);
 
-        ItemStack harmPotions = new PotionBuilder(Material.SPLASH_POTION, 111)
-                .addEffect(new PotionEffect(PotionEffectType.HARM, 1, 0))
-                .setDisplayName("&aChemist Potion")
-                .build();
-        addItem(1, harmPotions);
+        setPrice(400);
+        setHealth(18);
+
+        addEffect(new PotionEffect(PotionEffectType.REGENERATION, Integer.MAX_VALUE, 0));
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.NETHER_WART)
-                .setDisplayName("&aChemist")
-                .addLore("&7Force your opponents into submission")
-                .addLore("&7with a splash potion.")
+        ItemBuilder builder = new ItemBuilder(Material.GOLDEN_APPLE)
+                .setDisplayName("&aHealer")
+                .addLore("&7Regenerate health faster")
+                .addLore("&7to outlive your opponents.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());

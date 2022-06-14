@@ -5,7 +5,7 @@ import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.managers.SettingsManager;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Hat;
+import net.elytrapvp.ffa.game.cosmetics.Hat;
 import net.elytrapvp.ffa.objects.Spectator;
 import net.elytrapvp.ffa.scoreboards.FFAScoreboard;
 import net.elytrapvp.ffa.utilities.LocationUtils;

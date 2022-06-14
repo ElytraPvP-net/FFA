@@ -1,36 +1,33 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
-public class PyroKit extends Kit {
-    public PyroKit() {
-        super("Pyro", 3);
+public class SniperKit extends Kit {
+    public SniperKit() {
+        super("Sniper", 1);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aPyro Bow")
+                .setDisplayName("&aSniper Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 2)
-                .addEnchantment(Enchantment.ARROW_FIRE, 1)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 5)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
         addItem(0, bow);
 
-        addEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 0));
+        setHealth(12);
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.FLINT_AND_STEEL)
-                .setDisplayName("&aPyro")
-                .addLore("&7Light up the night,")
-                .addLore("&7or your enemies.")
+        ItemBuilder builder = new ItemBuilder(Material.BOW)
+                .setDisplayName("&aSniper")
+                .addLore("&7A strong bow to snipe")
+                .addLore("&7your opponents.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());

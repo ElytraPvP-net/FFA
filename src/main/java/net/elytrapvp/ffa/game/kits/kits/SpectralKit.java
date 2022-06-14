@@ -1,45 +1,38 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class CactusKit extends Kit {
-    public CactusKit() {
-        super("Cactus", 13);
-
-        ItemStack sword = new ItemBuilder(Material.WOODEN_SWORD)
-                .setDisplayName("&aCactus Sword")
-                .addEnchantment(Enchantment.DAMAGE_ALL, 1)
-                .build();
-        addItem(0, sword);
+public class SpectralKit extends Kit {
+    public SpectralKit() {
+        super("Spectral", 10);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aCactus Bow")
+                .setDisplayName("&aSpectral Bow")
                 .setUnbreakable(true)
                 .addEnchantment(Enchantment.ARROW_DAMAGE, 3)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
-        addItem(1, bow);
+        addItem(0, bow);
 
-        ItemStack elytra = new ItemBuilder(Material.ELYTRA)
-                .setDisplayName("&aElytra")
-                .addEnchantment(Enchantment.THORNS, 5)
+        ItemStack arrow = new ItemBuilder(Material.SPECTRAL_ARROW, 64)
+                .setDisplayName("&aSpectral Arrow")
                 .build();
-        setElytra(elytra);
+        setArrow(arrow);
 
         setPrice(400);
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.CACTUS)
-                .setDisplayName("&aCactus")
-                .addLore("&7Damage your opponents")
-                .addLore("&7every time they hit you.")
+        ItemBuilder builder = new ItemBuilder(Material.SPECTRAL_ARROW)
+                .setDisplayName("&aSpectral")
+                .addLore("&7Keep track of your enemies with")
+                .addLore("&7spectral arrows.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());

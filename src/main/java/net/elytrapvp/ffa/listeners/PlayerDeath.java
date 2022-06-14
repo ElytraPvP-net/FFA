@@ -3,7 +3,7 @@ package net.elytrapvp.ffa.listeners;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.DeathType;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.KillMessage;
+import net.elytrapvp.ffa.game.cosmetics.KillMessage;
 import net.elytrapvp.ffa.utilities.LocationUtils;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.md_5.bungee.api.ChatMessageType;

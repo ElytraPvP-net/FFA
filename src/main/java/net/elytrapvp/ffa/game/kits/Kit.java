@@ -1,5 +1,7 @@
-package net.elytrapvp.ffa.objects;
+package net.elytrapvp.ffa.game.kits;
 
+import net.elytrapvp.ffa.objects.CustomPlayer;
+import net.elytrapvp.ffa.game.cosmetics.Hat;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

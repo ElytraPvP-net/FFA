@@ -3,7 +3,7 @@ package net.elytrapvp.ffa;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import net.elytrapvp.ffa.managers.SettingsManager;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Tag;
+import net.elytrapvp.ffa.game.cosmetics.Tag;
 import org.bukkit.entity.Player;
 
 /**

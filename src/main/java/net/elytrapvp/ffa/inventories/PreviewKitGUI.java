@@ -1,6 +1,6 @@
 package net.elytrapvp.ffa.inventories;
 
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.gui.CustomGUI;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import net.elytrapvp.ffa.utilities.item.SkullBuilder;

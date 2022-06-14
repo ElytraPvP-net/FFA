@@ -1,6 +1,6 @@
 package net.elytrapvp.ffa.enums;
 
-import net.elytrapvp.ffa.objects.Tag;
+import net.elytrapvp.ffa.game.cosmetics.Tag;
 
 import java.util.ArrayList;
 import java.util.List;

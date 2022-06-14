@@ -1,6 +1,6 @@
 package net.elytrapvp.ffa.enums;
 
-import net.elytrapvp.ffa.objects.Hat;
+import net.elytrapvp.ffa.game.cosmetics.Hat;
 
 import java.util.ArrayList;
 import java.util.List;

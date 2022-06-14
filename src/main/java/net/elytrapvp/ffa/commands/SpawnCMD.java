@@ -3,7 +3,7 @@ package net.elytrapvp.ffa.commands;
 import net.elytrapvp.ffa.FFA;
 import net.elytrapvp.ffa.enums.Status;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Hat;
+import net.elytrapvp.ffa.game.cosmetics.Hat;
 import net.elytrapvp.ffa.utilities.LocationUtils;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;

@@ -1,7 +1,7 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -10,29 +10,26 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class HealerKit extends Kit {
-    public HealerKit() {
-        super("Healer", 8);
+public class TankKit extends Kit {
+    public TankKit() {
+        super("Tank", 4);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aHealer Bow")
+                .setDisplayName("&aTank Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 2)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 1)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
         addItem(0, bow);
 
-        setPrice(400);
-        setHealth(18);
-
-        addEffect(new PotionEffect(PotionEffectType.REGENERATION, Integer.MAX_VALUE, 0));
+        addEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 99999, 1));
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.GOLDEN_APPLE)
-                .setDisplayName("&aHealer")
-                .addLore("&7Regenerate health faster")
-                .addLore("&7to outlive your opponents.")
+        ItemBuilder builder = new ItemBuilder(Material.IRON_CHESTPLATE)
+                .setDisplayName("&aTank")
+                .addLore("&7Increased health to help")
+                .addLore("&7take the blows.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
@@ -42,7 +39,7 @@ public class HealerKit extends Kit {
         }
         else {
             builder.setMaterial(Material.GRAY_DYE)
-                    .addLore("&6Price: 400 Coins")
+                    .addLore("&6Price: 0 Coins")
                     .addLore("&7Left Click to Purchase")
                     .addLore("&7Right Click to Preview");
         }

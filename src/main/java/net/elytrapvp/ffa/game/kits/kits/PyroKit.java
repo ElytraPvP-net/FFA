@@ -1,39 +1,36 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
-public class KnightKit extends Kit {
-    public KnightKit() {
-        super("Knight", 2);
-
-        ItemStack sword = new ItemBuilder(Material.STONE_SWORD)
-                .setDisplayName("&aKnight Sword")
-                .setUnbreakable(true)
-                .addEnchantment(Enchantment.DAMAGE_ALL, 1)
-                .build();
-        addItem(0, sword);
+public class PyroKit extends Kit {
+    public PyroKit() {
+        super("Pyro", 3);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aKnight Bow")
+                .setDisplayName("&aPyro Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 3)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 2)
+                .addEnchantment(Enchantment.ARROW_FIRE, 1)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
-        addItem(1, bow);
+        addItem(0, bow);
+
+        addEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 0));
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.STONE_SWORD)
-                .setDisplayName("&aKnight")
-                .addLore("&7Slash your way into battle")
-                .addLore("&7with a stone sword.")
+        ItemBuilder builder = new ItemBuilder(Material.FLINT_AND_STEEL)
+                .setDisplayName("&aPyro")
+                .addLore("&7Light up the night,")
+                .addLore("&7or your enemies.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
@@ -48,7 +45,6 @@ public class KnightKit extends Kit {
                     .addLore("&7Right Click to Preview");
         }
 
-        builder.addFlag(ItemFlag.HIDE_ATTRIBUTES);
         return builder.build();
     }
 }

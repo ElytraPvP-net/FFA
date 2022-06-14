@@ -1,33 +1,41 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.utilities.item.ItemBuilder;
+import net.elytrapvp.ffa.utilities.item.PotionBuilder;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
-public class SniperKit extends Kit {
-    public SniperKit() {
-        super("Sniper", 1);
+public class ChemistKit extends Kit {
+    public ChemistKit() {
+        super("Chemist", 5);
+        setPrice(400);
 
         ItemStack bow = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aSniper Bow")
+                .setDisplayName("&aChemist Bow")
                 .setUnbreakable(true)
-                .addEnchantment(Enchantment.ARROW_DAMAGE, 5)
+                .addEnchantment(Enchantment.ARROW_DAMAGE, 3)
                 .addEnchantment(Enchantment.ARROW_INFINITE, 1)
                 .build();
         addItem(0, bow);
 
-        setHealth(12);
+        ItemStack harmPotions = new PotionBuilder(Material.SPLASH_POTION, 111)
+                .addEffect(new PotionEffect(PotionEffectType.HARM, 1, 0))
+                .setDisplayName("&aChemist Potion")
+                .build();
+        addItem(1, harmPotions);
     }
 
     public ItemStack getIcon(Player p) {
-        ItemBuilder builder = new ItemBuilder(Material.BOW)
-                .setDisplayName("&aSniper")
-                .addLore("&7A strong bow to snipe")
-                .addLore("&7your opponents.")
+        ItemBuilder builder = new ItemBuilder(Material.NETHER_WART)
+                .setDisplayName("&aChemist")
+                .addLore("&7Force your opponents into submission")
+                .addLore("&7with a splash potion.")
                 .addLore("");
 
         CustomPlayer cp = CustomPlayer.getCustomPlayers().get(p.getUniqueId());
@@ -37,7 +45,7 @@ public class SniperKit extends Kit {
         }
         else {
             builder.setMaterial(Material.GRAY_DYE)
-                    .addLore("&6Price: 0 Coins")
+                    .addLore("&6Price: 400 Coins")
                     .addLore("&7Left Click to Purchase")
                     .addLore("&7Right Click to Preview");
         }

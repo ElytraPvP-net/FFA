@@ -1,6 +1,6 @@
-package net.elytrapvp.ffa.objects.kits;
+package net.elytrapvp.ffa.game.kits.kits;
 
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 

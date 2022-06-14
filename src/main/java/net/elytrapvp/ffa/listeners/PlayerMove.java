@@ -7,7 +7,7 @@ import net.elytrapvp.ffa.events.PlayerEscapeEvent;
 import net.elytrapvp.ffa.events.PlayerLandEvent;
 import net.elytrapvp.ffa.managers.SettingsManager;
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import net.elytrapvp.ffa.objects.Spectator;
 import net.elytrapvp.ffa.utilities.LocationUtils;
 import net.elytrapvp.ffa.utilities.chat.ChatUtils;

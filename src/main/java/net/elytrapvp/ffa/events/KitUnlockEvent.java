@@ -1,7 +1,7 @@
 package net.elytrapvp.ffa.events;
 
 import net.elytrapvp.ffa.objects.CustomPlayer;
-import net.elytrapvp.ffa.objects.Kit;
+import net.elytrapvp.ffa.game.kits.Kit;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
