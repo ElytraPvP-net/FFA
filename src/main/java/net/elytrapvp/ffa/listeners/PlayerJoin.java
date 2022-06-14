@@ -57,13 +57,6 @@ public class PlayerJoin implements Listener {
             p.hidePlayer(FFA.getPlugin(), spectator);
         });
 
-        p.sendMessage("");
-        ChatUtils.centeredChat(p, "&a&lElytraPvP");
-        p.sendMessage("");
-        ChatUtils.chat(p, "&aDiscord &8- &fdiscord.elytrapvp.net");
-        ChatUtils.chat(p, "&aWebsite &8- &fhttp://www.elytrapvp.net");
-        p.sendMessage("");
-
         if(Via.getAPI().getPlayerVersion(p.getUniqueId()) < 316) {
             ChatUtils.chat(p, "&c&lThis mode requires 1.11.2 or newer!");
         }
