@@ -19,6 +19,7 @@ import net.elytrapvp.ffa.runnables.LeaderboardUpdate;
 import net.elytrapvp.ffa.runnables.MySQLHeartBeat;
 import net.elytrapvp.ffa.utilities.gui.GUIListeners;
 import net.elytrapvp.ffa.utilities.scoreboard.ScoreboardListeners;
+import net.elytrapvp.ffa.utilities.scoreboard.ScoreboardUpdate;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -65,6 +66,9 @@ public class FFA extends JavaPlugin {
         Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         leaderboardManager = new LeaderboardManager(this);
+
+        // Updates scoreboards every second
+        new ScoreboardUpdate().runTaskTimer(this, 20L, 20L);
     }
 
     @Override
